@@ -14,7 +14,7 @@ public class PlayerPush : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButtonDown(this.tag + "Push"))
+        if (!CompareTag("Victim") && Input.GetButtonDown(this.tag + "Push"))
         {
             GameObject b;
             int dir = this.GetComponent<Direction>().GetDirection();
