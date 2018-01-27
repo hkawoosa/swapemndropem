@@ -8,18 +8,46 @@ public class PlayerDeath : MonoBehaviour {
     public float knockbackTime = 1f;
 
     Rigidbody rb;
+    CapsuleCollider cc;
+    
+    public LayerMask Moving;
 
     bool isDead = false;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        cc = GetComponent<CapsuleCollider>();
+    }
+
+    void FixedUpdate()
+    {
+        
+      
     }
 
     void OnCollisionEnter(Collision col)
     {
         if (col.collider.CompareTag("Spikes") && !isDead) {
             StartCoroutine(Death(col));
+        }
+        
+    }
+
+   void OnCollisionStay(Collision col)
+    {
+        RaycastHit hit;
+        if (col.collider.CompareTag("Wall") && !isDead)
+        {
+            if (Physics.SphereCast(this.transform.position, .2f, Vector3.right, out hit, cc.bounds.extents.y, Moving))
+            {
+                
+                StartCoroutine(Death(col));
+            }
+            else if (Physics.SphereCast(this.transform.position, .2f, Vector3.left, out hit, cc.bounds.extents.y, Moving))
+            {
+                StartCoroutine(Death(col));
+            }
         }
     }
 

@@ -961,7 +961,7 @@ GameObject:
   - component: {fileID: 642598895}
   - component: {fileID: 642598894}
   - component: {fileID: 642598893}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Right Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1943,6 +1943,21 @@ Prefab:
       propertyPath: MovingPlatform.m_Bits
       value: 256
       objectReference: {fileID: 0}
+    - target: {fileID: 114983439105316032, guid: 2c17af3d09bb3454cb1f5af8cfea01ca,
+        type: 2}
+      propertyPath: Moving.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114983439105316032, guid: 2c17af3d09bb3454cb1f5af8cfea01ca,
+        type: 2}
+      propertyPath: Wall.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 136388626481041782, guid: 2c17af3d09bb3454cb1f5af8cfea01ca,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.525
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c17af3d09bb3454cb1f5af8cfea01ca, type: 2}
   m_IsPrefabParent: 0
@@ -2041,7 +2056,7 @@ GameObject:
   - component: {fileID: 1564900422}
   - component: {fileID: 1564900421}
   - component: {fileID: 1564900420}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Left Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
