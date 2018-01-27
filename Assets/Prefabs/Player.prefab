@@ -127,8 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   acceleration: 5
-  groundedJumpPower: 5
-  doubleJumpPower: 5
+  groundedJumpPower: 10
+  doubleJumpPower: 8
   gravity: 5
   jumpBuffer: 0
 --- !u!136 &136637573048674350
