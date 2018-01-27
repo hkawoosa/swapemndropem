@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
     void Awake()
     {
         mover = this.GetComponent<Movement>();
+        forceBox.SetActive(false);
     }
 
 
@@ -24,22 +25,28 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump"))
         {
-
+            Movement.Jump();
         }
 
         ///////////////////
         //Enable Force Push
-        ///////////////////
-        if (Input.GetButtonDown(""))
+        if (Input.GetButtonDown("Fire2"))
         {
-            
+            StartCoroutine(ForcePush());
         }
-        ///////////////////
         //Enable Hook
-        ///////////////////
-        if (Input.GetButtonDown(""))
+        if (Input.GetButtonDown("Fire3"))
         {
             
         }
+        ///////////////////
     }
+    
+    IEnumerator ForcePush()
+    {
+        forceBox.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        forceBox.SetActive(false);
+    }
+
 }
