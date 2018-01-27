@@ -6,10 +6,13 @@ public class MovingPlatform : MonoBehaviour {
 
     BoxCollider bc;
 
+    public LayerMask layer = 8;
+
     public Vector3 leftSide;
     public Vector3 rightSide;
     public float timeToTransverse = 1;
     Vector3 destination;
+    
 	
     // Use this for initialization
 	void Awake () {
