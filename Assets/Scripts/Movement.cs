@@ -16,8 +16,8 @@ public class Movement : MonoBehaviour {
     public float acceleration = 5;
 
     //vertical speed character will jump with
-    public float groundedJumpPower = 5;
-    public float doubleJumpPower = 5;
+    public float groundedJumpPower = 10;
+    public float doubleJumpPower = 8;
 
     public float gravity = 5;
 
