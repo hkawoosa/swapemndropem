@@ -3415,7 +3415,7 @@ GameObject:
   - component: {fileID: 1826355517}
   m_Layer: 0
   m_Name: Bottom Level (8)
-  m_TagString: Untagged
+  m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3738,6 +3738,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2038585186}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2079604999 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1279498422116394, guid: e7200ec777c0b7842b8f6cae12b0e603,
+    type: 2}
+  m_PrefabInternal: {fileID: 756084525}
+--- !u!114 &2079605007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2079604999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2b42f0a587eb14f90630c3382203a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockback: 100
+  knockbackTime: 1
 --- !u!1 &2134654899
 GameObject:
   m_ObjectHideFlags: 0

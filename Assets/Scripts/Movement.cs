@@ -9,6 +9,9 @@ public class Movement : MonoBehaviour {
 
     CapsuleCollider cc;
 
+    PlayerDeath pd;
+
+
     //character's final run speed
     public float maxSpeed = 5;
 
@@ -25,6 +28,7 @@ public class Movement : MonoBehaviour {
 
     int jumpsRemaining = 2;
     public float jumpBuffer = 0f;
+    Vector3 direction;
 
     bool stunned = false, usingHook = false;
 
@@ -32,14 +36,20 @@ public class Movement : MonoBehaviour {
     {
         rb = this.GetComponent<Rigidbody>();
         cc = this.GetComponent<CapsuleCollider>();
+        pd = this.GetComponent<PlayerDeath>();
         originalTag = this.tag;
     }
 
     void FixedUpdate()
-    {       
-         Vector3 newX = rb.velocity;
-         newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
-         rb.velocity = newX;
+    {
+        if (!pd.IsDead())
+        {
+            Vector3 newX = rb.velocity;
+            newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
+            rb.velocity = newX;
+
+            direction = new Vector3(Input.GetAxis(this.tag + "AimX"), Input.GetAxis(this.tag + "AimY"), 0);
+        }
 
         RaycastHit hit;
 
@@ -84,7 +94,15 @@ public class Movement : MonoBehaviour {
 
         if(Input.GetButtonDown(this.tag + "Swap"))
         {
-            
+            /*instantiate(swapBullet, this.transform.postion + 1 in whatever x direction you are facing, this.transform.rotation)
+             * 
+             * 
+             * 
+             * 
+             */
+
+
+            //this works for now but isnt what i want
             if (this.tag == "P1_")
             {
                 tag = "P2_";
