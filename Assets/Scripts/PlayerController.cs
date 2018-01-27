@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour {
     //Using Hook
     public IEnumerator throwHook()
     {
-        usingHook = true;
+        mover.SetUsingHook(true);
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         Vector3 angle = new Vector3(x, y, 0).normalized;
@@ -79,14 +79,14 @@ public class PlayerController : MonoBehaviour {
             hookBox.transform.position = Vector3.Lerp(hookBox.transform.position, hookStart, Time.deltaTime);
         }
         yield return new WaitForSeconds(0f);
-        usingHook = false;
+        mover.SetUsingHook(false);
     }
 
     //Stun
     public IEnumerator setStunned(float stunTime)
     {
-        stunned = true;
+        mover.SetStunned(true);
         yield return new WaitForSeconds(stunTime);
-        stunned = false;
+        mover.SetStunned(false);
     }
 }
