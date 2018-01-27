@@ -28,6 +28,7 @@ public class Movement : MonoBehaviour {
 
     int jumpsRemaining = 2;
     public float jumpBuffer = 0f;
+    Vector3 direction;
 
     bool stunned = false, usingHook = false;
 
@@ -46,6 +47,8 @@ public class Movement : MonoBehaviour {
             Vector3 newX = rb.velocity;
             newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
             rb.velocity = newX;
+
+            direction = new Vector3(Input.GetAxis(this.tag + "AimX"), Input.GetAxis(this.tag + "AimY"), 0);
         }
 
         RaycastHit hit;
