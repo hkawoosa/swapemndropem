@@ -43,14 +43,10 @@ public class Movement : MonoBehaviour {
 
         RaycastHit hit;
 
-        if (Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.max.x))
+        if (!Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.max.x))
         {
-           velocity.y = 0;
+            velocity.y -= gravity * Time.deltaTime;
         }
-        //else
-       // {
-        //    velocity.y -= gravity * Time.deltaTime;
-        //}
 
         if (jump)
         {
