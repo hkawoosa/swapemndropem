@@ -117,14 +117,14 @@ public class Movement : MonoBehaviour {
         }
         rb.velocity = newY;
 
-        if(Input.GetButtonDown(this.tag + "Swap"))
+        /*if(Input.GetButtonDown(this.tag + "Swap"))
         {
             /*instantiate(swapBullet, this.transform.postion + 1 in whatever x direction you are facing, this.transform.rotation)
              * 
              * 
              * 
              * 
-             */
+             
 
 
             //this works for now but isnt what i want
@@ -136,7 +136,7 @@ public class Movement : MonoBehaviour {
             {
                 tag = "P1_";
             }
-        }
+        }*/
 
         if(Input.GetButtonDown(this.tag + "Wavedash"))
         {
