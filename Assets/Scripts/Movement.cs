@@ -172,6 +172,4 @@ public class Movement : MonoBehaviour {
         this.tag = other.tag;
         other.tag = temp;
     }
-
-
 }
