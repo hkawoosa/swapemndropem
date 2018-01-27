@@ -27,6 +27,8 @@ public class Movement : MonoBehaviour {
     int jumpsRemaining = 2;
     public float jumpBuffer = 0f;
 
+    bool stunned = false, usingHook = false;
+
     void Awake()
     {
         rb = this.GetComponent<Rigidbody>();
@@ -93,5 +95,14 @@ public class Movement : MonoBehaviour {
     public void Jump()
     {
         
+    }
+
+    public void SetStunned(bool state)
+    {
+        stunned = state;
+    }
+    public void SetUsingHook(bool state)
+    {
+        usingHook = state;
     }
 }
