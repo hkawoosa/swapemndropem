@@ -21,8 +21,7 @@ public class Movement : MonoBehaviour {
 
     public float gravity = 5;
 
-    Vector3 velocity;
-    Vector3 direction;
+    string originalTag;
 
     int jumpsRemaining = 2;
     public float jumpBuffer = 0f;
@@ -33,6 +32,7 @@ public class Movement : MonoBehaviour {
     {
         rb = this.GetComponent<Rigidbody>();
         cc = this.GetComponent<CapsuleCollider>();
+        originalTag = this.tag;
     }
 
     void FixedUpdate()
@@ -42,8 +42,6 @@ public class Movement : MonoBehaviour {
          rb.velocity = newX;
 
         RaycastHit hit;
-
-        Debug.Log(jumpsRemaining);
 
         Vector3 newY = rb.velocity;
         if (Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x))
@@ -84,6 +82,25 @@ public class Movement : MonoBehaviour {
         }
         rb.velocity = newY;
 
+        if(Input.GetButtonDown(this.tag + "Swap"))
+        {
+            
+            if (this.tag == "P1_")
+            {
+                tag = "P2_";
+            }
+            else if (this.tag == "P2_")
+            {
+                tag = "P1_";
+            }
+        }
+
+        if(Input.GetButtonDown(this.tag + "Wavedash"))
+        {
+            Vector3 newDirection = rb.velocity;
+            newDirection.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
+            newDirection.y = Input.GetAxis(this.tag + "Vertical") * maxSpeed;
+        }
 
     }
 
