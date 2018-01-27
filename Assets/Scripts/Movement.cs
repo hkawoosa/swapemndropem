@@ -36,7 +36,7 @@ public class Movement : MonoBehaviour {
     void FixedUpdate()
     {       
          Vector3 newX = rb.velocity;
-         newX.x = Input.GetAxis("Horizontal") * maxSpeed;
+         newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
          rb.velocity = newX;
 
         RaycastHit hit;
@@ -65,7 +65,7 @@ public class Movement : MonoBehaviour {
             newY.y -= gravity * Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown(this.tag + "Jump"))
         {
             if(jumpsRemaining == 2)
             {
