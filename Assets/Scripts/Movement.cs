@@ -9,6 +9,8 @@ public class Movement : MonoBehaviour {
 
     CapsuleCollider cc;
 
+    PlayerDeath pd;
+
     //character's final run speed
     public float maxSpeed = 5;
 
@@ -32,14 +34,18 @@ public class Movement : MonoBehaviour {
     {
         rb = this.GetComponent<Rigidbody>();
         cc = this.GetComponent<CapsuleCollider>();
+        pd = this.GetComponent<PlayerDeath>();
         originalTag = this.tag;
     }
 
     void FixedUpdate()
-    {       
-         Vector3 newX = rb.velocity;
-         newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
-         rb.velocity = newX;
+    {
+        if (!pd.IsDead())
+        {
+            Vector3 newX = rb.velocity;
+            newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
+            rb.velocity = newX;
+        }
 
         RaycastHit hit;
 

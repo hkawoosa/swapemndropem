@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114693001456155304}
   - component: {fileID: 114575580479000160}
   - component: {fileID: 54167657493955286}
+  - component: {fileID: 114983439105316032}
   m_Layer: 0
   m_Name: P1_
   m_TagString: P1_
@@ -114,6 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceBox: {fileID: 0}
   hookBox: {fileID: 0}
+  forceTime: 0
+  hookDist: 0
 --- !u!114 &114693001456155304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,6 +134,19 @@ MonoBehaviour:
   doubleJumpPower: 8
   gravity: 5
   jumpBuffer: 0.2
+--- !u!114 &114983439105316032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1173511536878320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2b42f0a587eb14f90630c3382203a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockback: 100
+  knockbackTime: 1
 --- !u!136 &136388626481041782
 CapsuleCollider:
   m_ObjectHideFlags: 1
