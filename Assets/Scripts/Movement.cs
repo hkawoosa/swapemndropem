@@ -16,14 +16,16 @@ public class Movement : MonoBehaviour {
     public float acceleration = 5;
 
     //vertical speed character will jump with
-    public float jumpPower = 5;
+    public float groundedJumpPower = 5;
+    public float doubleJumpPower = 5;
 
     public float gravity = 5;
 
     Vector3 velocity;
     Vector3 direction;
 
-    bool jump;
+    int jumpsRemaining = 2;
+    public float jumpBuffer = 0f;
 
     void Awake()
     {
@@ -32,38 +34,60 @@ public class Movement : MonoBehaviour {
     }
 
     void FixedUpdate()
-    {
-
-        Vector3 xVelocity = velocity;
-        xVelocity.y = 0;
-        Vector3 groundDirection = direction * maxSpeed - xVelocity;
-
-        float stepSize = Mathf.Min(acceleration * Time.deltaTime, groundDirection.magnitude);
-        velocity += groundDirection * stepSize;
+    {       
+         Vector3 newX = rb.velocity;
+         newX.x = Input.GetAxis("Horizontal") * maxSpeed;
+         rb.velocity = newX;
 
         RaycastHit hit;
 
-        if (!Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.max.x))
+        Debug.Log(jumpsRemaining);
+
+        Vector3 newY = rb.velocity;
+        if (Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x))
         {
-            velocity.y -= gravity * Time.deltaTime;
+            if(jumpBuffer <= 0)
+            {
+                jumpsRemaining = 2;
+            }
+            else
+            {
+                jumpBuffer -= Time.deltaTime;
+            }
+            
+        }
+        else
+        {
+            newY.y -= gravity * Time.deltaTime;
         }
 
-        if (jump)
+        if (Input.GetButtonDown("Jump"))
         {
-            velocity.y = jumpPower;
-            jump = false;
+            if(jumpsRemaining == 2)
+            {
+                newY.y = groundedJumpPower;
+                jumpsRemaining--;
+                jumpBuffer = .2f;
+            }
+            else if(jumpsRemaining == 1)
+            {
+                newY.y = doubleJumpPower;
+                jumpsRemaining--;
+            }
+            
         }
+        rb.velocity = newY;
 
-        rb.velocity = velocity;
+
     }
 
     public void SetDirection(Vector3 direction)
     {
-        this.direction = direction;
+        
     }
 
     public void Jump()
     {
-        jump = true;
+        
     }
 }
