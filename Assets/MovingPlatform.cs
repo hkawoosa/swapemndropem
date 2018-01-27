@@ -10,6 +10,7 @@ public class MovingPlatform : MonoBehaviour {
     public Vector3 rightSide;
     public float timeToTransverse = 1;
     Vector3 destination;
+    
 	
     // Use this for initialization
 	void Awake () {
