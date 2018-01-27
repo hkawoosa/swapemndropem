@@ -165,4 +165,13 @@ public class Movement : MonoBehaviour {
     {
         usingHook = state;
     }
+
+    public void Swap(GameObject other)
+    {
+        string temp = this.tag;
+        this.tag = other.tag;
+        other.tag = temp;
+    }
+
+
 }
