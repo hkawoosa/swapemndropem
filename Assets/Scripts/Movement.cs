@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour {
 
     PlayerDeath pd;
 
-    public LayerMask layer;
+    public LayerMask MovingPlatform;
 
     //character's final run speed
     public float maxSpeed = 5;
@@ -46,28 +46,37 @@ public class Movement : MonoBehaviour {
         RaycastHit hit;
 
        
-        /**if(Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x, layer))
+        /**if(Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x, MovingPlatform))
         {
             Vector3 onPlatform = rb.velocity;
             onPlatform.x = hit.transform.position.x;
+            onPlatform.x += Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
+            if (onPlatform.x >= 0)
+            {
+                onPlatform.x = Mathf.Min(onPlatform.x, maxSpeed);
+            }
+            else
+            {
+                onPlatform.x = Mathf.Max(onPlatform.x, maxSpeed * -1);
+            }
             rb.velocity = onPlatform;
         }*/
-         if (!pd.IsDead())
+        if(!pd.IsDead())
         {
             Vector3 newX = rb.velocity;
             newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
-            if(newX.x >= 0)
+            if (newX.x >= 0)
             {
                 newX.x = Mathf.Min(newX.x, maxSpeed);
             }
             else
             {
                 newX.x = Mathf.Max(newX.x, maxSpeed * -1);
-            }    
+            }
             rb.velocity = newX;
 
             direction = new Vector3(Input.GetAxis(this.tag + "AimX"), Input.GetAxis(this.tag + "AimY"), 0);
-        }
+        }       
 
         Vector3 newY = rb.velocity;
         if (Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x))
