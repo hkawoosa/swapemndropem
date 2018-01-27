@@ -8,7 +8,7 @@ public class MovingPlatform : MonoBehaviour {
 
     public Vector3 leftSide;
     public Vector3 rightSide;
-    public float timeToTransverse = 8;
+    public float timeToTransverse = 1;
     Vector3 destination;
 	
     // Use this for initialization
@@ -20,34 +20,21 @@ public class MovingPlatform : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         Debug.Log(destination);
-        if (destination == rightSide)
+        if (transform.position != destination)
         {
-            destination = leftSide;
+            transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * timeToTransverse);
         }
-        else if (destination == leftSide)
+        else
         {
-            destination = rightSide;
+            if (transform.position == leftSide && destination == leftSide)
+            {
+                destination = rightSide;
+            }
+            else if (transform.position == rightSide && destination == rightSide)
+            {
+                destination = leftSide;
+            }
         }
-    }
-
-    IEnumerator move()
-    {
-        float rate = 1 / timeToTransverse;
-        float index = 0.0f;
-        Vector3 startPosition = this.transform.position;
-
-        
-
-        while (index < 1.0)
-        {
-            transform.position = Vector3.Lerp(startPosition, destination, index);
-            index += rate * Time.deltaTime;
-            yield return new WaitForSeconds(timeToTransverse);
-
-        }
-        transform.position = destination;
-
-        yield return null;
     }
     
 }
