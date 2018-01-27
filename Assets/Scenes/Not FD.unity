@@ -1469,7 +1469,7 @@ GameObject:
   - component: {fileID: 1124389439}
   - component: {fileID: 1124389444}
   - component: {fileID: 1124389443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1568,10 +1568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94bddcb46ad9124b9cfa35c12ca4244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
-  leftSide: {x: -10, y: -4, z: 1}
+  leftSide: {x: -11, y: -4, z: 1}
   rightSide: {x: 11, y: -4, z: 1}
   timeToTransverse: 5
 --- !u!1 &1158514527
@@ -1936,6 +1933,11 @@ Prefab:
       value: 
       objectReference: {fileID: 13400000, guid: ab68d6896b7f4fe41962e23a0fcd4332,
         type: 2}
+    - target: {fileID: 114693001456155304, guid: 2c17af3d09bb3454cb1f5af8cfea01ca,
+        type: 2}
+      propertyPath: layer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c17af3d09bb3454cb1f5af8cfea01ca, type: 2}
   m_IsPrefabParent: 0

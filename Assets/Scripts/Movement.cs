@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour {
 
     PlayerDeath pd;
 
+    public LayerMask layer;
 
     //character's final run speed
     public float maxSpeed = 5;
@@ -45,16 +46,16 @@ public class Movement : MonoBehaviour {
         RaycastHit hit;
 
        
-        if(Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x, 8))
+        /**if(Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x, layer))
         {
             Vector3 onPlatform = rb.velocity;
             onPlatform.x = hit.transform.position.x;
             rb.velocity = onPlatform;
-        }
-        else if (!pd.IsDead())
+        }*/
+         if (!pd.IsDead())
         {
             Vector3 newX = rb.velocity;
-            newX.x += Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
+            newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
             if(newX.x >= 0)
             {
                 newX.x = Mathf.Min(newX.x, maxSpeed);
