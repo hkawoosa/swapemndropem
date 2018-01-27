@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour {
 
     Movement mover;
 
+    public GameObject forceBox;
+    public GameObject hookBox;
+
     void Awake()
     {
         mover = this.GetComponent<Movement>();
@@ -22,6 +25,21 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("Jump"))
         {
 
+        }
+
+        ///////////////////
+        //Enable Force Push
+        ///////////////////
+        if (Input.GetButtonDown(""))
+        {
+            
+        }
+        ///////////////////
+        //Enable Hook
+        ///////////////////
+        if (Input.GetButtonDown(""))
+        {
+            
         }
     }
 }
