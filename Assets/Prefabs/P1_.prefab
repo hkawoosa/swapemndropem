@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114983439105316032}
   - component: {fileID: 114596020449917286}
   - component: {fileID: 114670681118925778}
+  - component: {fileID: 114726543341714332}
   m_Layer: 9
   m_Name: P1_
   m_TagString: P1_
@@ -163,6 +164,20 @@ MonoBehaviour:
   doubleJumpPower: 8
   gravity: 5
   jumpBuffer: 0.2
+  stunLength: 1
+--- !u!114 &114726543341714332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1173511536878320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cbed1c3b4a1b249b903445957cecf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  push: {fileID: 1702754880212340, guid: 87de92b72669aa7429438aed07d84c76, type: 2}
+  force: 5
 --- !u!114 &114983439105316032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,6 +191,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockback: 100
   knockbackTime: 1
+  Moving:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!136 &136388626481041782
 CapsuleCollider:
   m_ObjectHideFlags: 1

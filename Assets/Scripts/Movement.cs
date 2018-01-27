@@ -34,6 +34,7 @@ public class Movement : MonoBehaviour {
     Vector3 direction;
 
     bool stunned = false, usingHook = false;
+    Vector3 pushedVelocity;
 
     void Awake()
     {
@@ -48,37 +49,38 @@ public class Movement : MonoBehaviour {
         RaycastHit hit;
         if(stunnedFor <= 0)
         {
-            /**if(Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x, MovingPlatform))
-        {
-            Vector3 onPlatform = rb.velocity;
-            onPlatform.x = hit.transform.position.x;
-            onPlatform.x += Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
-            if (onPlatform.x >= 0)
-            {
-                onPlatform.x = Mathf.Min(onPlatform.x, maxSpeed);
-            }
-            else
-            {
+                /**if(Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x, MovingPlatform))
+                {
+                Vector3 onPlatform = rb.velocity;
+                onPlatform.x = hit.transform.position.x;
+                  onPlatform.x += Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
+                 if (onPlatform.x >= 0)
+                 {
+                     onPlatform.x = Mathf.Min(onPlatform.x, maxSpeed);
+                 }
+                 else
+                     {
                 onPlatform.x = Mathf.Max(onPlatform.x, maxSpeed * -1);
-            }
-            rb.velocity = onPlatform;
-        }*/
-            if (!pd.IsDead())
-            {
-                Vector3 newX = rb.velocity;
-                newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
-                if (newX.x >= 0)
+                       }
+                       rb.velocity = onPlatform;
+                     }*/
+                if (!pd.IsDead())
                 {
-                    newX.x = Mathf.Min(newX.x, maxSpeed);
-                }
-                else
-                {
-                    newX.x = Mathf.Max(newX.x, maxSpeed * -1);
-                }
-                rb.velocity = newX;
+                    Vector3 newX = rb.velocity;
+                    newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
+                    if (newX.x >= 0)
+                    {
+                        newX.x = Mathf.Min(newX.x, maxSpeed);
+                    }
+                    else
+                    {
+                        newX.x = Mathf.Max(newX.x, maxSpeed * -1);
+                    }
+                    rb.velocity = newX;
 
-                direction = new Vector3(Input.GetAxis(this.tag + "AimX"), Input.GetAxis(this.tag + "AimY"), 0);
-            }
+                    direction = new Vector3(Input.GetAxis(this.tag + "AimX"), Input.GetAxis(this.tag + "AimY"), 0);
+               }
+            
 
             Vector3 newY = rb.velocity;
             if (Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x))
@@ -128,6 +130,10 @@ public class Movement : MonoBehaviour {
         }
         else
         {
+            if(pushedVelocity.x > 0)
+            {
+                rb.velocity = pushedVelocity;
+            }
             stunnedFor -= Time.deltaTime;
         }
        
@@ -154,11 +160,35 @@ public class Movement : MonoBehaviour {
         usingHook = state;
     }
 
+    public void setStunTime(float length)
+    {
+        stunnedFor = length;
+    }
+
+
     public void Swap(GameObject other)
     {
         string temp = this.tag;
         this.tag = other.tag;
-        stunnedFor = stunLength;
+        other.GetComponent<Movement>().setStunTime(stunLength);
         other.tag = temp;
+    }
+
+    public void Push(int dir, float force)
+    {
+        stunnedFor = 2f;
+        if(dir == 1)
+        {
+            //add left to their speed
+
+            pushedVelocity = rb.velocity;
+            pushedVelocity.x = Vector3.right.x * force;
+        }
+        else
+        {
+            //add right to their vector
+            pushedVelocity = rb.velocity;
+            pushedVelocity.x = Vector3.left.x * force;
+        }
     }
 }
