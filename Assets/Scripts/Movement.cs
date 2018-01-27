@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour {
 
     PlayerDeath pd;
 
+
     //character's final run speed
     public float maxSpeed = 5;
 
@@ -90,7 +91,15 @@ public class Movement : MonoBehaviour {
 
         if(Input.GetButtonDown(this.tag + "Swap"))
         {
-            
+            /*instantiate(swapBullet, this.transform.postion + 1 in whatever x direction you are facing, this.transform.rotation)
+             * 
+             * 
+             * 
+             * 
+             */
+
+
+            //this works for now but isnt what i want
             if (this.tag == "P1_")
             {
                 tag = "P2_";
