@@ -6,12 +6,22 @@ public class Hook : MonoBehaviour {
 
 	public GameObject player;
 	public float hookTime;
+	GameObject hookedPlayer;
 	
 	void OnTriggerEnter(Collider other)
 	{
-		
-		
-		StartCoroutine(player.GetComponent<PlayerController>().setStunned(hookTime));
-		StartCoroutine(player.GetComponent<PlayerController>().pullHook();
+		if (other.tag.Contains( "Player"))
+		{
+			StopCoroutine(player.GetComponent<PlayerController>().throwHook());
+			StartCoroutine(other.GetComponent<PlayerController>().setStunned(hookTime));
+			StartCoroutine(player.GetComponent<PlayerController>().pullHook());
+			hookedPlayer = other.gameObject;
+		}
+		else //if (other.tag == "Wall" || other.tag == "ground")
+		{
+			StopCoroutine(player.GetComponent<PlayerController>().throwHook());
+			StartCoroutine(player.GetComponent<PlayerController>().setStunned(hookTime / 2f));
+			StartCoroutine(player.GetComponent<PlayerController>().pullHook());
+		}
 	}
 }
