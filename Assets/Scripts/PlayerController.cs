@@ -5,9 +5,17 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     Movement mover;
-
     public GameObject forceBox;
     public GameObject hookBox;
+    //public vars
+    public float forceTime;
+    public float hookDist;
+
+    //bools
+    bool stunned = false;
+    bool usingHook = false;
+
+    
 
     void Awake()
     {
@@ -25,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump"))
         {
-            Movement.Jump();
+            //Movement.Jump();
         }
 
         ///////////////////
@@ -42,11 +50,33 @@ public class PlayerController : MonoBehaviour {
         ///////////////////
     }
     
+
+    //Activate forcePush
     IEnumerator ForcePush()
     {
         forceBox.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(forceTime);
         forceBox.SetActive(false);
     }
 
+    //Using Hook
+    public IEnumerator throwHook()
+    {
+        
+        
+        yield return new WaitForSeconds(.5f);
+        StartCoroutine(pullHook());
+    }
+    public IEnumerator pullHook()
+    {
+        yield return new WaitForSeconds(0f);
+    }
+
+    //Stun
+    public IEnumerator setStunned(float stunTime)
+    {
+        stunned = true;
+        yield return new WaitForSeconds(stunTime);
+        stunned = false;
+    }
 }
