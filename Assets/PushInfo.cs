@@ -7,6 +7,7 @@ public class PushInfo : MonoBehaviour
 
     float force;
     int dir;
+    string tag;
 
     public void setDirection(int dir)
     {
@@ -23,6 +24,15 @@ public class PushInfo : MonoBehaviour
     public float getForce()
     {
         return force;
+    }
+
+    public void setTag(string tag)
+    {
+        this.tag = tag;
+    }
+    public string getTag()
+    {
+        return tag;
     }
 
 }

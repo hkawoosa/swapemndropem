@@ -8,7 +8,7 @@ public class OnPush : MonoBehaviour {
     {
         Debug.Log(other);
         Movement m = other.GetComponent<Movement>();
-        if (m != null)
+        if (m != null && other.tag != this.GetComponent<PushInfo>().getTag())
         {
             m.Push(GetComponent<PushInfo>().getDirection(), GetComponent<PushInfo>().getForce());
         }
