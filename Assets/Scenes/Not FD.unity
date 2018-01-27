@@ -1946,7 +1946,7 @@ Prefab:
     - target: {fileID: 114983439105316032, guid: 2c17af3d09bb3454cb1f5af8cfea01ca,
         type: 2}
       propertyPath: Moving.m_Bits
-      value: 0
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 114983439105316032, guid: 2c17af3d09bb3454cb1f5af8cfea01ca,
         type: 2}
