@@ -112,6 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ba02dffb468eb468061744b42cc672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forceBox: {fileID: 0}
+  hookBox: {fileID: 0}
 --- !u!114 &114667945635651300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,7 +127,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   acceleration: 5
-  jumpPower: 5
+  groundedJumpPower: 5
+  doubleJumpPower: 5
+  gravity: 5
+  jumpBuffer: 0
 --- !u!136 &136637573048674350
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -136,6 +141,6 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 2.05
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

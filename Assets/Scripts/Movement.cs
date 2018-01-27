@@ -58,6 +58,10 @@ public class Movement : MonoBehaviour {
         }
         else
         {
+            if(jumpsRemaining == 2)
+            {
+                jumpsRemaining = 1;
+            }
             newY.y -= gravity * Time.deltaTime;
         }
 
