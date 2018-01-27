@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour {
     {
         mover = this.GetComponent<Movement>();
         forceBox.SetActive(false);
-        
     }
 
 
