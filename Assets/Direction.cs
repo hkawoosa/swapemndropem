@@ -13,15 +13,14 @@ public class Direction : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Input.GetAxis(tag + "Horizontal") > 0)
+		if (!CompareTag("Victim") && Input.GetAxis(tag + "Horizontal") > 0)
         {
             direction = 1;
         }
-        else if (Input.GetAxis(tag + "Horizontal") < 0)
+        else if (!CompareTag("Victim") && Input.GetAxis(tag + "Horizontal") < 0)
         {
             direction = -1;
         }
-        Debug.Log(direction);
 	}
 
     public int GetDirection()

@@ -67,7 +67,7 @@ public class Movement : MonoBehaviour {
                 if (!pd.IsDead())
                 {
                     Vector3 newX = rb.velocity;
-                    newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
+                    if (!CompareTag("Victim")) newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
                     if (newX.x >= 0)
                     {
                         newX.x = Mathf.Min(newX.x, maxSpeed);
@@ -78,7 +78,7 @@ public class Movement : MonoBehaviour {
                     }
                     rb.velocity = newX;
 
-                    direction = new Vector3(Input.GetAxis(this.tag + "AimX"), Input.GetAxis(this.tag + "AimY"), 0);
+                    // direction = new Vector3(Input.GetAxis(this.tag + "AimX"), Input.GetAxis(this.tag + "AimY"), 0);
                }
             
 
@@ -104,7 +104,7 @@ public class Movement : MonoBehaviour {
                 newY.y -= gravity * Time.deltaTime;
             }
 
-            if (Input.GetButtonDown(this.tag + "Jump"))
+            if (!CompareTag("Victim") && Input.GetButtonDown(this.tag + "Jump"))
             {
                 if (jumpsRemaining == 2)
                 {
@@ -121,7 +121,7 @@ public class Movement : MonoBehaviour {
             }
             rb.velocity = newY;
 
-            if (Input.GetButtonDown(this.tag + "Wavedash"))
+            if (!CompareTag("Victim") && Input.GetButtonDown(this.tag + "Wavedash"))
             {
                 Vector3 newDirection = rb.velocity;
                 newDirection.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;

@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour {
 
         Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal"), 0,0);
 
-        mover.SetDirection(direction);
 
         ///////////////////
         //Enable Force Push

@@ -10,5 +10,4 @@ public class DestroyOnTime : MonoBehaviour {
 	void Start () {
         Destroy(this.gameObject, destroyTime);
 	}
-	
 }
