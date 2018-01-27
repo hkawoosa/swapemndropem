@@ -33,11 +33,6 @@ public class PlayerController : MonoBehaviour {
 
         mover.SetDirection(direction);
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            //Movement.Jump();
-        }
-
         ///////////////////
         //Enable Force Push
         if (Input.GetButtonDown("Fire2"))
