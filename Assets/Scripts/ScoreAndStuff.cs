@@ -66,12 +66,18 @@ public class ScoreAndStuff : MonoBehaviour {
 
     }
 
-    public void ManageRespawn()
+    public void ManageRespawn(GameObject player)
     {
         for(int i = 0; i < pcc.Length; i++)
         {
-            //current head = original head
-            pcc[i].tag = pcc[i].GetComponent<Movement>().getOriginalTag();
+            if (pcc[i].GetComponent<Movement>().getOriginalTag() == player.tag)
+            {
+                pcc[i].tag = pcc[i].GetComponent<Movement>().getOriginalTag();
+                //smae thing for head
+            }
+            
         }
+        player.tag = player.GetComponent<Movement>().getOriginalTag();
+        //same thing for head
     }
 }

@@ -22,14 +22,14 @@ public class Respawn : MonoBehaviour {
             if (passOne)
             {
                 passOne = false;
-                playerManaging.GetComponent<ScoreAndStuff>().ManageRespawn();
+                playerManaging.GetComponent<ScoreAndStuff>().ManageRespawn(this.gameObject);
                 currentCounter = deathLength;
             }
             else
             {
                 GetComponent<PlayerDeath>().undie();
                 transform.rotation = Quaternion.identity;
-                playerManaging.GetComponent<ScoreAndStuff>().ManageRespawn();
+                playerManaging.GetComponent<ScoreAndStuff>().ManageRespawn(this.gameObject);
                 transform.position = respawnPosition;
                 passOne = true;
             }
