@@ -25,6 +25,59 @@ public class ScoreAndStuff : MonoBehaviour {
 
     public void ChangeScore(GameObject deadPlayer)
     {
+        if (deadPlayer.GetComponent<Movement>().getOriginalTag() == "Victim")
+        {
+            if (deadPlayer.tag == "P1_")
+            {
+                Team1Score++;
+            }
+            else if (deadPlayer.tag == "P2_")
+            {
+                Team2Score++;
+            }
+            else
+            {
+                Team1Score--;
+                Team2Score--;
+            }
+        }
+        else if (deadPlayer.GetComponent<Movement>().getOriginalTag() == "P1_" || deadPlayer.GetComponent<Movement>().getOriginalTag() == "P3_")
+        {
+            if(deadPlayer.tag == "P2_" || deadPlayer.tag == "P4_")
+            {
+                Team2Score++;
+            }
+            else
+            {
+                Team1Score--;
+            }
+        }
+        else if (deadPlayer.GetComponent<Movement>().getOriginalTag() == "P2_" || deadPlayer.GetComponent<Movement>().getOriginalTag() == "P4_")
+        {
+            if (deadPlayer.tag == "P1_" || deadPlayer.tag == "P3_")
+            {
+                Team1Score++;
+            }
+            else
+            {
+                Team2Score--;
+            }
+        }
 
+    }
+
+    public void ManageRespawn(GameObject player)
+    {
+        for(int i = 0; i < pcc.Length; i++)
+        {
+            if (pcc[i].GetComponent<Movement>().getOriginalTag() == player.tag)
+            {
+                pcc[i].tag = pcc[i].GetComponent<Movement>().getOriginalTag();
+                //smae thing for head
+            }
+            
+        }
+        player.tag = player.GetComponent<Movement>().getOriginalTag();
+        //same thing for head
     }
 }
