@@ -153,14 +153,6 @@ public class Movement : MonoBehaviour {
                     newY.y = groundedJumpPower;
                     jumpsRemaining--;
                     jumpBuffer = .2f;
-<<<<<<< HEAD
-
-                   
-
-=======
-                    source1 = GetComponent<AudioSource>();
-                    source1.PlayOneShot(doublejump);
->>>>>>> 34c036ce0265df1e0847651656bfb2d5567d703b
                 }
                 else if (jumpsRemaining == 1)
                 {
