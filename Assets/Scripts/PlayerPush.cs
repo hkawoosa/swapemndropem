@@ -15,7 +15,7 @@ public class PlayerPush : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Push") && currentDelay <= 0)
+        if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Push") && currentDelay <= 0 && !GetComponent<PlayerDeath>().IsDead())
         {
             currentDelay = forcePushDelay;
             GameObject b;

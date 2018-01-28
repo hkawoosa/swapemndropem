@@ -14,7 +14,7 @@ public class PlayerChain : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Pull") && currentDelay <= 0)
+        if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Pull") && currentDelay <= 0 && !GetComponent<PlayerDeath>().IsDead())
         {
             currentDelay = chainPushDelay;
             GetComponent<Movement>().setStunTime(50);

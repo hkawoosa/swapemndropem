@@ -121,35 +121,16 @@ public class Movement : MonoBehaviour {
             Vector3 newY = rb.velocity;
             if (Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x))
             {
-                
-                if (jumpBuffer <= 0)
-                
-                {
-
-                   
-                    jumpsRemaining = 2;
-                    
-                }
-               
-                else
-                {
-                    jumpBuffer -= Time.deltaTime;
-                }
-
+                jumpsRemaining = 2;
             }
-            
-            else
-                
+            else   
             {
                 if (jumpsRemaining == 2)
                 {
-                  
                     jumpsRemaining = 1;
                 }
-                newY.y -= gravity * Time.deltaTime;
-               
+                newY.y -= gravity * Time.deltaTime;   
             }
-
             if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Jump"))
             {
                 animator.SetTrigger("Jump");
@@ -161,25 +142,17 @@ public class Movement : MonoBehaviour {
                     jumpBuffer = .2f;
                     source1 = GetComponent<AudioSource>();
                     source1.PlayOneShot(doublejump);
-
-                   
-
                 }
-               
                 else if (jumpsRemaining == 1)
                 {
-                    
                     newY.y = doubleJumpPower;
                     jumpsRemaining--;
-                }
-
-
-                
+                } 
             }
             rb.velocity = newY;
 
-                if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Wavedash"))
-               {
+            if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Wavedash"))
+            {
                    Vector3 newDirection = rb.velocity;
                   newDirection.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
                    newDirection.y = Input.GetAxis(this.tag + "Vertical") * maxSpeed;
