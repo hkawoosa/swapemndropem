@@ -31,7 +31,7 @@ public class PlayerChain : MonoBehaviour {
             {
                 Vector3 endPoint = transform.position;
                 endPoint.x += chainLength;
-                b = Instantiate(chain, transform.position + (Vector3.right * dir), Quaternion.identity);
+                b = Instantiate(chain, transform.position + (Vector3.right * dir), Quaternion.Euler(0,0,180));
                 b.GetComponent<ChainInfo>().setEnd(endPoint);
             }
 
