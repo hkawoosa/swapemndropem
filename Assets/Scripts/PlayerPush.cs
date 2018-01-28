@@ -26,7 +26,6 @@ public class PlayerPush : MonoBehaviour {
             if (dir == -1)
             {
                 b = Instantiate(Push, transform.position + (Vector3.right * dir), Quaternion.identity);
-                Debug.Log("hi");
             }
             else
             {
