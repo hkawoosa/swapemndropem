@@ -242,7 +242,7 @@ MonoBehaviour:
   doubleJumpPower: 8
   gravity: 5
   doublejump: {fileID: 8300000, guid: 213981427f4434670967158e475c4fb9, type: 3}
-  singlestep: {fileID: 8300000, guid: eeb50c1d63ed342848bf330557354a5b, type: 3}
+  singlestep: {fileID: 0}
   hookshotgrabbingon: {fileID: 0}
   hookshotgoingout: {fileID: 0}
   hookshotdrawingbackin: {fileID: 0}
@@ -320,7 +320,7 @@ MonoBehaviour:
   deathvar2: {fileID: 8300000, guid: 516299be58e6c4e61be3c24837f36e3e, type: 3}
   Moving:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!136 &136497966695768132
 CapsuleCollider:
   m_ObjectHideFlags: 1
