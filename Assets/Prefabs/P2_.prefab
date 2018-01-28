@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cbed1c3b4a1b249b903445957cecf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  push: {fileID: 1702754880212340, guid: 87de92b72669aa7429438aed07d84c76, type: 2}
+  push: {fileID: 1276912182042390, guid: abe784459f39c2f4db5af397ce722f9f, type: 2}
   distanceFromPlayer: 3
   force: 5
   forcePushDelay: 2
