@@ -138,12 +138,13 @@ public class Movement : MonoBehaviour {
         {
             if (hooked)
             {
-                if (transform.position != hookedDest)
+                if (Mathf.Abs(transform.position.x - hookedDest.x) > .2f)
                 {
                     transform.position = Vector3.MoveTowards(transform.position, hookedDest, hookedTime);
                 }
                 else
                 {
+                    Debug.Log(hooked);
                     rb.useGravity = true;
                     hooked = false;
                     stunnedFor = .5f;
@@ -217,6 +218,7 @@ public class Movement : MonoBehaviour {
         rb.useGravity = false;
         hooked = true;
         hookedDest = destination;
+        Debug.Log(hookedDest);
         hookedTime = time;
         stunnedFor = 10f;
     }
