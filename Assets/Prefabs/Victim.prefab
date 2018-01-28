@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2b42f0a587eb14f90630c3382203a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreGuy: {fileID: 0}
   knockback: 100
   knockbackTime: 1
   deathvar2: {fileID: 8300000, guid: 516299be58e6c4e61be3c24837f36e3e, type: 3}
@@ -294,7 +295,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789368767118224}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ab68d6896b7f4fe41962e23a0fcd4332, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.8

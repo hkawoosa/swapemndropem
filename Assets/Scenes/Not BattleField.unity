@@ -257,7 +257,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 33519879}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ab68d6896b7f4fe41962e23a0fcd4332, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -877,7 +877,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 196070551}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ab68d6896b7f4fe41962e23a0fcd4332, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1362,7 +1362,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321296980}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ab68d6896b7f4fe41962e23a0fcd4332, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2989,7 +2989,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b456bb559559ce4db143fde75b6ac7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: []
 --- !u!4 &1045863820
 Transform:
   m_ObjectHideFlags: 0
@@ -3764,7 +3763,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1324214095}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ab68d6896b7f4fe41962e23a0fcd4332, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -5609,7 +5608,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1817483207}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ab68d6896b7f4fe41962e23a0fcd4332, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -5699,7 +5698,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1817683601}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ab68d6896b7f4fe41962e23a0fcd4332, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
