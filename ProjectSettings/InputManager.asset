@@ -742,7 +742,7 @@ InputManager:
     axis: 4
     joyNum: 4
   - serializedVersion: 3
-    m_Name: P3_Swap
+    m_Name: P4_Swap
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -758,7 +758,7 @@ InputManager:
     axis: 4
     joyNum: 4
   - serializedVersion: 3
-    m_Name: P3_Push
+    m_Name: P4_Push
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -774,7 +774,7 @@ InputManager:
     axis: 4
     joyNum: 4
   - serializedVersion: 3
-    m_Name: P3_Pull
+    m_Name: P4_Pull
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
