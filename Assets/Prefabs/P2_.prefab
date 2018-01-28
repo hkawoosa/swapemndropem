@@ -60,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1400068621169694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.35, y: 2.36, z: 0}
+  m_LocalPosition: {x: 0, y: 2.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4506579708103682}
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chain: {fileID: 1200153796114612, guid: 179e37bcbf6e7f4449ff68cdbfbd80a9, type: 2}
-  chainPushDelay: 4
+  chainPushDelay: 2
   timeToDestination: 0.5
   chainLength: 7
 --- !u!114 &114246951541007784
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cbed1c3b4a1b249b903445957cecf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  push: {fileID: 1276912182042390, guid: abe784459f39c2f4db5af397ce722f9f, type: 2}
+  Push: {fileID: 1276912182042390, guid: abe784459f39c2f4db5af397ce722f9f, type: 2}
   distanceFromPlayer: 3
   force: 5
   forcePushDelay: 2

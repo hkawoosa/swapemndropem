@@ -197,6 +197,8 @@ public class Movement : MonoBehaviour {
 
     public void Push(int dir, float force)
     {
+        Debug.Log(dir);
+        Debug.Log(force);
         stunnedFor = 2f;
         if(dir == 1)
         {

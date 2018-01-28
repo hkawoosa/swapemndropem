@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerPush : MonoBehaviour {
-    public GameObject push;
+    public GameObject Push;
 
-    public float distanceFromPlayer = 3f;
+    public float distanceFromPlayer = 1f;
 
     public float force = 12;
 
@@ -25,11 +25,12 @@ public class PlayerPush : MonoBehaviour {
             int dir = this.GetComponent<Direction>().GetDirection();
             if (dir == -1)
             {
-                b = Instantiate(push, transform.position + (Vector3.right * dir) * distanceFromPlayer, Quaternion.identity);
+                b = Instantiate(Push, transform.position + (Vector3.right * dir), Quaternion.identity);
+                Debug.Log("hi");
             }
             else
             {
-                b = Instantiate(push, transform.position + (Vector3.right * dir) * distanceFromPlayer, Quaternion.identity);
+                b = Instantiate(Push, transform.position + (Vector3.right * dir), Quaternion.identity);
             }
             b.GetComponent<PushInfo>().setTag(this.tag);
             b.GetComponent<PushInfo>().setDirection(dir);
