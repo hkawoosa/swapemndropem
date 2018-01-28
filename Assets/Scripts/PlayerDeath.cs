@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour {
 
+    public GameObject scoreGuy;
+
     public float knockback = 100f;
     public float knockbackTime = 1f;
 
@@ -62,6 +64,7 @@ public class PlayerDeath : MonoBehaviour {
     {
 		source.PlayOneShot(deathvar2,volume);
         isDead = true;
+        scoreGuy.GetComponent<ScoreAndStuff>().ChangeScore(col.collider.gameObject);
         Vector3 direction = col.impulse.normalized + Vector3.up;
         rb.AddForce(direction * knockback);
         for (float t = 0; t < knockbackTime; t += Time.deltaTime)
@@ -69,6 +72,7 @@ public class PlayerDeath : MonoBehaviour {
             transform.Rotate(0, 0, Mathf.Lerp(0, 180, t / knockbackTime));
             yield return null;
         }
+
     }
 
     public bool IsDead()
@@ -77,6 +81,6 @@ public class PlayerDeath : MonoBehaviour {
     }
     public void undie()
     {
-        isDead = true;
+        isDead = false;
     }
 }

@@ -197,7 +197,6 @@ public class Movement : MonoBehaviour {
                 }
                 else
                 {
-                    Debug.Log(hooked);
                     rb.useGravity = true;
                     hooked = false;
                     stunnedFor = .5f;
