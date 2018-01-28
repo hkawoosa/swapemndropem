@@ -65,21 +65,22 @@ public class Movement : MonoBehaviour {
         
         if (stunnedFor <= 0)
         {
-                /**if(Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x, MovingPlatform))
-                {
-                Vector3 onPlatform = rb.velocity;
-                onPlatform.x = hit.transform.position.x;
-                  onPlatform.x += Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
-                 if (onPlatform.x >= 0)
+            /**if(Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x, MovingPlatform))
+            {
+            Vector3 onPlatform = rb.velocity;
+            onPlatform.x = hit.transform.position.x;
+              onPlatform.x += Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
+             if (onPlatform.x >= 0)
+             {
+                 onPlatform.x = Mathf.Min(onPlatform.x, maxSpeed);
+             }
+             else
                  {
-                     onPlatform.x = Mathf.Min(onPlatform.x, maxSpeed);
-                 }
-                 else
-                     {
-                onPlatform.x = Mathf.Max(onPlatform.x, maxSpeed * -1);
-                       }
-                       rb.velocity = onPlatform;
-                     }*/
+            onPlatform.x = Mathf.Max(onPlatform.x, maxSpeed * -1);
+                   }
+                   rb.velocity = onPlatform;
+                 }*/
+            pushedVelocity.x = 0;
                 if (!pd.IsDead())
                 {
                     Vector3 newX = rb.velocity;
@@ -190,7 +191,7 @@ public class Movement : MonoBehaviour {
                     stunnedFor = .5f;
                 }
             }
-            else if (pushedVelocity.x > 0)
+            else if (pushedVelocity.x != 0)
             {
                 rb.velocity = pushedVelocity;
             }
@@ -241,5 +242,10 @@ public class Movement : MonoBehaviour {
         Debug.Log(hookedDest);
         hookedTime = time;
         stunnedFor = 10f;
+    }
+
+    public string getOriginalTag()
+    {
+        return originalTag;
     }
 }
