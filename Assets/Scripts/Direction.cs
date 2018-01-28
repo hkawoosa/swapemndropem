@@ -17,14 +17,14 @@ public class Direction : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (!CompareTag("Victim") && Input.GetAxis(tag + "Horizontal") > 0)
+		if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetAxis(tag + "Horizontal") > 0)
         {
             direction = 1;
             Vector3 newScale = transform.localScale;
             newScale.x = Mathf.Abs(newScale.x);
             this.transform.localScale = newScale;
         }
-        else if (!CompareTag("Victim") && Input.GetAxis(tag + "Horizontal") < 0)
+        else if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetAxis(tag + "Horizontal") < 0)
         {
             direction = -1;
             Vector3 newScale = transform.localScale;

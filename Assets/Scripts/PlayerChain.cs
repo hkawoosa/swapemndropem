@@ -8,12 +8,12 @@ public class PlayerChain : MonoBehaviour {
     public float chainPushDelay = 4;
     float currentDelay = 0;
 
-    float chainLength = 7f;
+    public float chainLength = 7f;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown(this.tag + "Pull") && currentDelay <= 0)
+        if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Pull") && currentDelay <= 0)
         {
             currentDelay = chainPushDelay;
             GetComponent<Movement>().setStunTime(chainPushDelay);
