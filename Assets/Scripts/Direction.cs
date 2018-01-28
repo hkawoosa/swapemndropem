@@ -20,12 +20,16 @@ public class Direction : MonoBehaviour {
 		if (!CompareTag("Victim") && Input.GetAxis(tag + "Horizontal") > 0)
         {
             direction = 1;
-            this.transform.localScale = new Vector3(1, 1, 1);
+            Vector3 newScale = transform.localScale;
+            newScale.x = Mathf.Abs(newScale.x);
+            this.transform.localScale = newScale;
         }
         else if (!CompareTag("Victim") && Input.GetAxis(tag + "Horizontal") < 0)
         {
             direction = -1;
-            this.transform.localScale = new Vector3(-1, 1, 1);
+            Vector3 newScale = transform.localScale;
+            newScale.x = -Mathf.Abs(newScale.x);
+            this.transform.localScale = newScale;
         }
 	}
 
