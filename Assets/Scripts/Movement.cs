@@ -41,13 +41,16 @@ public class Movement : MonoBehaviour {
     float stunnedFor = 0;
     public float stunLength = 1f;
     Vector3 direction;
-
+    private Animator animator;
     bool hooked = false;
     Vector3 pushedVelocity;
 
     Vector3 hookedDest;
     float hookedTime;
-
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     void Awake()
     {
         rb = this.GetComponent<Rigidbody>();
@@ -59,7 +62,8 @@ public class Movement : MonoBehaviour {
     void FixedUpdate()
     {
         RaycastHit hit;
-        if(stunnedFor <= 0)
+        
+        if (stunnedFor <= 0)
         {
                 /**if(Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x, MovingPlatform))
                 {
@@ -79,27 +83,40 @@ public class Movement : MonoBehaviour {
                 if (!pd.IsDead())
                 {
                     Vector3 newX = rb.velocity;
-                    if ((CompareTag("P1_") || CompareTag("P2_")))
+                
+
+
+                if ((CompareTag("P1_") || CompareTag("P2_")))
                     {
-                        newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
-                    }
-                    if (newX.x >= 0)
+                  
+                    newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
+                 
+
+                }
+                    if (newX.x > 0 || newX.x < 0)
                     {
-                        newX.x = Mathf.Min(newX.x, maxSpeed);
-                    }
+                        //newX.x = Mathf.Min(newX.x, maxSpeed);
+                   
+                    animator.SetTrigger("Walk");
+                }
                     else
                     {
                         newX.x = Mathf.Max(newX.x, maxSpeed * -1);
-                    }
-                    rb.velocity = newX;
+                    animator.SetTrigger("Idle");
+                }
+                
+                rb.velocity = newX;
 
-                    // direction = new Vector3(Input.GetAxis(this.tag + "AimX"), Input.GetAxis(this.tag + "AimY"), 0);
-               }
+
+               
+                // direction = new Vector3(Input.GetAxis(this.tag + "AimX"), Input.GetAxis(this.tag + "AimY"), 0);
+            }
             
 
             Vector3 newY = rb.velocity;
             if (Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x))
             {
+                
                 if (jumpBuffer <= 0)
                 {
                     jumpsRemaining = 2;
@@ -111,9 +128,11 @@ public class Movement : MonoBehaviour {
 
             }
             else
+                
             {
                 if (jumpsRemaining == 2)
                 {
+                  
                     jumpsRemaining = 1;
                 }
                 newY.y -= gravity * Time.deltaTime;
@@ -121,14 +140,17 @@ public class Movement : MonoBehaviour {
 
             if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Jump"))
             {
+                animator.SetTrigger("Jump");
+
                 if (jumpsRemaining == 2)
                 {
                     newY.y = groundedJumpPower;
                     jumpsRemaining--;
                     jumpBuffer = .2f;
-					source1 = GetComponent<AudioSource>();
-					source1.PlayOneShot(doublejump);
+                    source1 = GetComponent<AudioSource>();
+                    source1.PlayOneShot(doublejump);
                 }
+
                 else if (jumpsRemaining == 1)
                 {
                     newY.y = doubleJumpPower;
@@ -137,14 +159,19 @@ public class Movement : MonoBehaviour {
 
             }
             rb.velocity = newY;
-
+            
             if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Wavedash"))
             {
                 Vector3 newDirection = rb.velocity;
                 newDirection.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
                 newDirection.y = Input.GetAxis(this.tag + "Vertical") * maxSpeed;
             }
+            if (jumpsRemaining == 2)
+            {
+                animator.SetTrigger("Idle After Jump");
+            }
         }
+       
         else
         {
             if (hooked)
@@ -152,8 +179,8 @@ public class Movement : MonoBehaviour {
                 if (Mathf.Abs(transform.position.x - hookedDest.x) > .2f)
                 {
                     transform.position = Vector3.MoveTowards(transform.position, hookedDest, hookedTime);
-					source5 = GetComponent<AudioSource>();
-					source5.PlayOneShot(hookshotdrawingbackin);
+                    source5 = GetComponent<AudioSource>();
+                    source5.PlayOneShot(hookshotdrawingbackin);
                 }
                 else
                 {
@@ -163,11 +190,11 @@ public class Movement : MonoBehaviour {
                     stunnedFor = .5f;
                 }
             }
-            else if(pushedVelocity.x > 0)
+            else if (pushedVelocity.x > 0)
             {
                 rb.velocity = pushedVelocity;
             }
-             
+
             stunnedFor -= Time.deltaTime;
         }
     }
