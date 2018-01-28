@@ -18,7 +18,11 @@ public class PlayerPush : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+<<<<<<< HEAD:Assets/PlayerPush.cs
         if (Input.GetButtonDown(this.tag + "Push") && currentDelay <=0)
+=======
+        if (!CompareTag("Victim") && Input.GetButtonDown(this.tag + "Push"))
+>>>>>>> origin/master:Assets/Scripts/PlayerPush.cs
         {
             currentDelay = forcePushDelay;
             GameObject b;

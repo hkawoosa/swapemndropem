@@ -6,10 +6,10 @@ public class DestroyOnHit : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Movement m = other.GetComponent<Movement>();
-        if(m != null)
+        Swap s = other.GetComponent<Swap>();
+        if(other.gameObject.layer == LayerMask.NameToLayer("Victim"))
         {
-            m.Swap(GetComponent<BulletOrigin>().GetPlayer());
+            s.SwapControl(GetComponent<BulletOrigin>().GetPlayer());
         }
         Destroy(this.gameObject);
     }
