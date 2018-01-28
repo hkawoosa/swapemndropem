@@ -64,7 +64,7 @@ public class PlayerDeath : MonoBehaviour {
     {
 		source.PlayOneShot(deathvar2,volume);
         isDead = true;
-        scoreGuy.GetComponent<ScoreAndStuff>().ChangeScore(col.collider.gameObject);
+        scoreGuy.GetComponent<ScoreAndStuff>().ChangeScore(this.gameObject);
         Vector3 direction = col.impulse.normalized + Vector3.up;
         rb.AddForce(direction * knockback);
         for (float t = 0; t < knockbackTime; t += Time.deltaTime)

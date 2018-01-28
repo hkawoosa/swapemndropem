@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour {
 
+    public GameObject playerManaging;
     public float deathLength = 5;
     float currentCounter = 0;
     bool passOne = true;
@@ -21,18 +22,16 @@ public class Respawn : MonoBehaviour {
             if (passOne)
             {
                 passOne = false;
+                playerManaging.GetComponent<ScoreAndStuff>().ManageRespawn();
                 currentCounter = deathLength;
             }
             else
             {
                 GetComponent<PlayerDeath>().undie();
                 transform.rotation = Quaternion.identity;
-                if(tag != GetComponent<Movement>().getOriginalTag())
-                {
-                    string temp = tag;
-                    tag = GetComponent<Movement>().getOriginalTag();
-                }
+                playerManaging.GetComponent<ScoreAndStuff>().ManageRespawn();
                 transform.position = respawnPosition;
+                passOne = true;
             }
         }
         currentCounter -= Time.deltaTime;
