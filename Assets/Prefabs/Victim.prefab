@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 136622720944658088}
   - component: {fileID: 82220024987404658}
   - component: {fileID: 95621283377788572}
+  - component: {fileID: 114079210356228382}
   m_Layer: 12
   m_Name: Victim
   m_TagString: Victim
@@ -193,6 +194,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114079210356228382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789368767118224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba1314d8d1ab1984eafaa57a362af99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerManaging: {fileID: 0}
+  deathLength: 5
 --- !u!114 &114094982081701840
 MonoBehaviour:
   m_ObjectHideFlags: 1
