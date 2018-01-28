@@ -365,6 +365,28 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 100904551}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &103016868 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1369063110045166, guid: 2c17af3d09bb3454cb1f5af8cfea01ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 1396052731}
+--- !u!95 &103016880
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 103016868}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c0d765288ad159245ab1f3ad8983d839, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &176411054
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,7 +970,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &642598892
 GameObject:
@@ -1957,6 +1979,10 @@ Prefab:
         type: 2}
       propertyPath: m_Radius
       value: 0.525
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450409634447942, guid: 2c17af3d09bb3454cb1f5af8cfea01ca, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c17af3d09bb3454cb1f5af8cfea01ca, type: 2}
