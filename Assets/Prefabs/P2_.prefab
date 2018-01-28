@@ -36,7 +36,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4506579708103682}
   - component: {fileID: 114246951541007784}
-  - component: {fileID: 114136460867872768}
   - component: {fileID: 54842682778705706}
   - component: {fileID: 114849954261648190}
   - component: {fileID: 114340850519311688}
@@ -108,21 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chain: {fileID: 1200153796114612, guid: 179e37bcbf6e7f4449ff68cdbfbd80a9, type: 2}
   chainPushDelay: 4
---- !u!114 &114136460867872768
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1538255624575118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10ba02dffb468eb468061744b42cc672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forceBox: {fileID: 1702754880212340, guid: 87de92b72669aa7429438aed07d84c76, type: 2}
-  hookBox: {fileID: 0}
-  forceTime: 0
-  hookDist: 0
 --- !u!114 &114246951541007784
 MonoBehaviour:
   m_ObjectHideFlags: 1

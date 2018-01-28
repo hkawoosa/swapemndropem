@@ -39,12 +39,12 @@ GameObject:
   - component: {fileID: 136773948688363228}
   - component: {fileID: 212804163513964592}
   - component: {fileID: 114056142403457242}
-  - component: {fileID: 114592331118152226}
   - component: {fileID: 114244640227763568}
   - component: {fileID: 114999721326773186}
   - component: {fileID: 114925008705412038}
   - component: {fileID: 114503008319540966}
   - component: {fileID: 114492163116745138}
+  - component: {fileID: 114871132594442654}
   m_Layer: 9
   m_Name: P1_
   m_TagString: P1_
@@ -159,7 +159,7 @@ MonoBehaviour:
   distanceFromPlayer: 3
   force: 5
   forcePushDelay: 2
---- !u!114 &114592331118152226
+--- !u!114 &114871132594442654
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -167,13 +167,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1369063110045166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10ba02dffb468eb468061744b42cc672, type: 3}
+  m_Script: {fileID: 11500000, guid: a8d374613fd2d824f820fd3a99741ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceBox: {fileID: 1702754880212340, guid: 87de92b72669aa7429438aed07d84c76, type: 2}
-  hookBox: {fileID: 0}
-  forceTime: 0
-  hookDist: 0
+  chain: {fileID: 1200153796114612, guid: 179e37bcbf6e7f4449ff68cdbfbd80a9, type: 2}
+  chainPushDelay: 4
 --- !u!114 &114925008705412038
 MonoBehaviour:
   m_ObjectHideFlags: 1

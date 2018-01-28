@@ -8,7 +8,7 @@ public class ChainInfo : MonoBehaviour {
     float timeToDestination;
     Vector3 endPosition;
     bool reached = false;
-    GameObject hooked;
+    GameObject par;
 
     void FixedUpdate()
     {
@@ -32,6 +32,7 @@ public class ChainInfo : MonoBehaviour {
             }
             else
             {
+                par.GetComponent<Movement>().setStunTime(0.0f);
                 Destroy(this.gameObject);
             }
         }
@@ -39,7 +40,6 @@ public class ChainInfo : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        hooked = other.gameObject;
         Movement m = other.GetComponent<Movement>();
         if (m != null && other.tag != tag)
         {
@@ -73,5 +73,9 @@ public class ChainInfo : MonoBehaviour {
     public Vector3 getLength()
     {
         return endPosition;
+    }
+    public void setParent(GameObject pa)
+    {
+        par = pa;
     }
 }

@@ -33,7 +33,8 @@ public class PlayerChain : MonoBehaviour {
                 b = Instantiate(chain, transform.position + (Vector3.right * dir), Quaternion.identity);
                 b.GetComponent<ChainInfo>().setEnd(endPoint);
             }
-            
+
+            b.GetComponent<ChainInfo>().setParent(this.gameObject);
             b.GetComponent<ChainInfo>().setStart(transform.position + (Vector3.right * dir));
             b.GetComponent<ChainInfo>().setTime(chainPushDelay/2);
             b.tag = tag;
