@@ -20,7 +20,7 @@ public class PlayerGun : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Swap") && currentDelay <= 0 && !GetComponent<PlayerDeath>().IsDead())
+        if (((CompareTag("P1_") || CompareTag("P2_") || CompareTag("P3_") || CompareTag("P4_"))) && Input.GetButtonDown(this.tag + "Swap") && currentDelay <= 0 && !GetComponent<PlayerDeath>().IsDead())
         {
             currentDelay = BulletDelay;
             GameObject b = Instantiate(bullet, transform.position + (Vector3.right * dir.GetDirection()), Quaternion.identity);

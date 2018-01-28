@@ -12,7 +12,7 @@ public class ScoreAndStuff : MonoBehaviour {
 
     public GameObject[] pcc;
 
-    
+    int found = -1;
 	// Use this for initialization
 	void Start () {
 		
@@ -68,16 +68,48 @@ public class ScoreAndStuff : MonoBehaviour {
 
     public void ManageRespawn(GameObject player)
     {
-        for(int i = 0; i < pcc.Length; i++)
+        if(style == Mode.victim)
         {
-            if (pcc[i].GetComponent<Movement>().getOriginalTag() == player.tag)
+            for (int i = 0; i < pcc.Length; i++)
             {
-                pcc[i].tag = player.tag;
-                pcc[i].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+                if (pcc[i].GetComponent<Movement>().getOriginalTag() == player.tag)
+                {
+                    pcc[i].tag = player.tag;
+                    pcc[i].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+                }
+
             }
-            
+            player.tag = player.GetComponent<Movement>().getOriginalTag();
+            player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = player.GetComponent<Movement>().getOriginalHead();
         }
-        player.tag = player.GetComponent<Movement>().getOriginalTag();
-        player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = player.GetComponent<Movement>().getOriginalHead();
+        else
+        {
+            if(player.tag != player.GetComponent<Movement>().getOriginalTag())
+            {
+                for (int i = 0; i < pcc.Length; i++)
+                {
+                    if (pcc[i].GetComponent<Movement>().getOriginalTag() == player.tag)
+                    {
+                        found = i;
+
+                    }
+                }
+                    if (player.GetComponent<Movement>().getOriginalTag() != pcc[found].tag)
+                    {
+                        for (int j = 0; j < pcc.Length; j++)
+                        {
+                            if (player.GetComponent<Movement>().getOriginalTag() == pcc[j].tag)
+                            {
+                                pcc[j].tag = pcc[found].tag;
+                                pcc[j].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = pcc[found].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+                            }
+                        }
+                        pcc[found].tag = player.tag;
+                        pcc[found].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+                    }
+                player.tag = player.GetComponent<Movement>().getOriginalTag();
+                player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = player.GetComponent<Movement>().getOriginalHead();
+            } 
+        }
     }
 }

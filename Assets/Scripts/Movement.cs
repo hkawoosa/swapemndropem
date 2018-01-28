@@ -90,7 +90,7 @@ public class Movement : MonoBehaviour {
                 
 
 
-                if ((CompareTag("P1_") || CompareTag("P2_")))
+                if ((CompareTag("P1_") || CompareTag("P2_") || CompareTag("P3_") || CompareTag("P4_")))
                     {
                   
                     newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
@@ -137,7 +137,7 @@ public class Movement : MonoBehaviour {
                 }
                 newY.y -= gravity * Time.deltaTime;   
             }
-            if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Jump"))
+            if (((CompareTag("P1_") || CompareTag("P2_") || CompareTag("P3_") || CompareTag("P4_"))) && Input.GetButtonDown(this.tag + "Jump"))
             {
                 animator.SetTrigger("Jump");
 				source1 = GetComponent<AudioSource>();
@@ -157,7 +157,7 @@ public class Movement : MonoBehaviour {
             }
             rb.velocity = newY;
 
-            if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Wavedash"))
+            if ((CompareTag("P1_") || CompareTag("P2_") || CompareTag("P3_") || CompareTag("P4_")) && Input.GetButtonDown(this.tag + "Wavedash"))
             {
                    Vector3 newDirection = rb.velocity;
                   newDirection.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
