@@ -70,7 +70,10 @@ public class Movement : MonoBehaviour {
                 if (!pd.IsDead())
                 {
                     Vector3 newX = rb.velocity;
-                    if (!CompareTag("Victim")) newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
+                    if ((CompareTag("P1_") || CompareTag("P2_")))
+                    {
+                        newX.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
+                    }
                     if (newX.x >= 0)
                     {
                         newX.x = Mathf.Min(newX.x, maxSpeed);
@@ -107,7 +110,7 @@ public class Movement : MonoBehaviour {
                 newY.y -= gravity * Time.deltaTime;
             }
 
-            if (!CompareTag("Victim") && Input.GetButtonDown(this.tag + "Jump"))
+            if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Jump"))
             {
                 if (jumpsRemaining == 2)
                 {
