@@ -127,7 +127,7 @@ public class Movement : MonoBehaviour {
             }
             rb.velocity = newY;
 
-            if (!CompareTag("Victim") && Input.GetButtonDown(this.tag + "Wavedash"))
+            if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Wavedash"))
             {
                 Vector3 newDirection = rb.velocity;
                 newDirection.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
