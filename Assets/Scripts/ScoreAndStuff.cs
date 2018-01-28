@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreAndStuff : MonoBehaviour {
 
     public enum Mode { teams, victim };
     int Team1Score = 0;//Player 1 in victim, 1 and 3 in teams
     int Team2Score = 0;//Player 2 in victim, 2 and 4 in teams
+
+    public Text score1;
+    public Text score2;
 
     public Mode style;
 
@@ -15,7 +19,8 @@ public class ScoreAndStuff : MonoBehaviour {
     int found = -1;
 	// Use this for initialization
 	void Start () {
-		
+        score1 = GameObject.Find("Team 1").GetComponent<Text>();
+        score2 = GameObject.Find("Team 2").GetComponent<Text>();
 	}
 	
 	// Update is called once per frame
@@ -63,6 +68,8 @@ public class ScoreAndStuff : MonoBehaviour {
                 Team2Score--;
             }
         }
+        score1.text = "" + Team1Score;
+        score2.text = "" + Team2Score;
 
     }
 
