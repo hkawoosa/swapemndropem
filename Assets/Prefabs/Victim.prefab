@@ -36,7 +36,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4182758935195378}
   - component: {fileID: 114969940942875468}
-  - component: {fileID: 114564902294777528}
   - component: {fileID: 54090612433789746}
   - component: {fileID: 114094982081701840}
   - component: {fileID: 114707960120201780}
@@ -122,21 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be157a661ceafe43b7d733f650567bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114564902294777528
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1789368767118224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10ba02dffb468eb468061744b42cc672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forceBox: {fileID: 1702754880212340, guid: 87de92b72669aa7429438aed07d84c76, type: 2}
-  hookBox: {fileID: 0}
-  forceTime: 0
-  hookDist: 0
 --- !u!114 &114707960120201780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cbed1c3b4a1b249b903445957cecf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  push: {fileID: 1276912182042390, guid: abe784459f39c2f4db5af397ce722f9f, type: 2}
+  Push: {fileID: 0}
   distanceFromPlayer: 3
   force: 5
   forcePushDelay: 2
@@ -181,10 +165,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   maxSpeed: 5
-  acceleration: 5
   groundedJumpPower: 10
   doubleJumpPower: 8
   gravity: 5
+  doublejump: {fileID: 0}
+  running: {fileID: 0}
+  hookshotgrabbingon: {fileID: 0}
+  hookshotgoingout: {fileID: 0}
+  hookshotdrawingbackin: {fileID: 0}
   jumpBuffer: 0.2
   stunLength: 1
 --- !u!114 &114974355211375804

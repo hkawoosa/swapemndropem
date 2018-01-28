@@ -16,9 +16,6 @@ public class Movement : MonoBehaviour {
     //character's final run speed
     public float maxSpeed = 5;
 
-    //speed which with character gets up to top speed
-    public float acceleration = 5;
-
     //vertical speed character will jump with
     public float groundedJumpPower = 10;
     public float doubleJumpPower = 8;
@@ -45,7 +42,7 @@ public class Movement : MonoBehaviour {
     public float stunLength = 1f;
     Vector3 direction;
 
-    bool stunned = false, usingHook = false, hooked = false;
+    bool hooked = false;
     Vector3 pushedVelocity;
 
     Vector3 hookedDest;
@@ -173,28 +170,6 @@ public class Movement : MonoBehaviour {
              
             stunnedFor -= Time.deltaTime;
         }
-       
-        
-
-    }
-
-    public void SetDirection(Vector3 direction)
-    {
-        
-    }
-
-    public void Jump()
-    {
-        
-    }
-
-    public void SetStunned(bool state)
-    {
-        stunned = state;
-    }
-    public void SetUsingHook(bool state)
-    {
-        usingHook = state;
     }
 
     public void setStunTime(float length)
