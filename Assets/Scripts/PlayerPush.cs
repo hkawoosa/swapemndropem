@@ -18,16 +18,12 @@ public class PlayerPush : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-<<<<<<< HEAD:Assets/PlayerPush.cs
-        if (Input.GetButtonDown(this.tag + "Push") && currentDelay <=0)
-=======
-        if (!CompareTag("Victim") && Input.GetButtonDown(this.tag + "Push"))
->>>>>>> origin/master:Assets/Scripts/PlayerPush.cs
+        if (!CompareTag("Victim") && Input.GetButtonDown(this.tag + "Push") && currentDelay <= 0)
         {
             currentDelay = forcePushDelay;
             GameObject b;
             int dir = this.GetComponent<Direction>().GetDirection();
-            if(dir == -1)
+            if (dir == -1)
             {
                 b = Instantiate(push, transform.position + (Vector3.right * dir) * distanceFromPlayer, Quaternion.identity);
             }
