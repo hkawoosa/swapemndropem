@@ -107,6 +107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chain: {fileID: 1200153796114612, guid: 179e37bcbf6e7f4449ff68cdbfbd80a9, type: 2}
   chainPushDelay: 4
+  timeToDestination: 0.5
+  chainLength: 7
 --- !u!114 &114246951541007784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovingPlatform:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   maxSpeed: 5
   acceleration: 5
   groundedJumpPower: 10
@@ -194,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockback: 100
   knockbackTime: 1
+  deathvar2: {fileID: 0}
   Moving:
     serializedVersion: 2
     m_Bits: 0

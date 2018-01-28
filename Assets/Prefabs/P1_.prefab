@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1369063110045166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.111313, y: 0.07, z: 0}
+  m_LocalPosition: {x: -5.111313, y: 0.07, z: 1}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_Children:
   - {fileID: 4388826374799552}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovingPlatform:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   maxSpeed: 5
   acceleration: 5
   groundedJumpPower: 10
@@ -128,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockback: 100
   knockbackTime: 1
+  deathvar2: {fileID: 0}
   Moving:
     serializedVersion: 2
     m_Bits: 0
@@ -172,6 +173,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chain: {fileID: 1200153796114612, guid: 179e37bcbf6e7f4449ff68cdbfbd80a9, type: 2}
   chainPushDelay: 4
+  timeToDestination: 0.5
+  chainLength: 7
 --- !u!114 &114925008705412038
 MonoBehaviour:
   m_ObjectHideFlags: 1
