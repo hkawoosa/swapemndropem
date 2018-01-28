@@ -222,6 +222,10 @@ MonoBehaviour:
   chain: {fileID: 1200153796114612, guid: 179e37bcbf6e7f4449ff68cdbfbd80a9, type: 2}
   chainPushDelay: 2
   timeToDestination: 0.5
+  hookshotgrabbingon: {fileID: 0}
+  hookshotgoingout: {fileID: 0}
+  hookshotdrawingbackin: {fileID: 0}
+  vol: 0.3
   chainLength: 7
 --- !u!114 &114246951541007784
 MonoBehaviour:
@@ -242,10 +246,7 @@ MonoBehaviour:
   doubleJumpPower: 8
   gravity: 5
   doublejump: {fileID: 8300000, guid: 213981427f4434670967158e475c4fb9, type: 3}
-  singlestep: {fileID: 0}
-  hookshotgrabbingon: {fileID: 0}
-  hookshotgoingout: {fileID: 0}
-  hookshotdrawingbackin: {fileID: 0}
+  singlestep: {fileID: 8300000, guid: eeb50c1d63ed342848bf330557354a5b, type: 3}
   jumpBuffer: 0.2
   stunLength: 1
 --- !u!114 &114263243454629214
