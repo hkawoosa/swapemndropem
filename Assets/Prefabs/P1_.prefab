@@ -105,7 +105,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 536fde94f7d994b53b633809d6b9c6b1,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 516299be58e6c4e61be3c24837f36e3e, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.612
   m_Pitch: 1
@@ -195,6 +195,12 @@ MonoBehaviour:
   groundedJumpPower: 10
   doubleJumpPower: 8
   gravity: 5
+  doublejump: {fileID: 8300000, guid: 213981427f4434670967158e475c4fb9, type: 3}
+  running: {fileID: 0}
+  hookshotgrabbingon: {fileID: 0}
+  hookshotgoingout: {fileID: 0}
+  hookshotdrawingbackin: {fileID: 8300000, guid: 9eae39a976b9f4ad8871f08ca85852bd,
+    type: 3}
   jumpBuffer: 0.2
   stunLength: 1
 --- !u!114 &114244640227763568

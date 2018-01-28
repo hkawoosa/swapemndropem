@@ -25,6 +25,18 @@ public class Movement : MonoBehaviour {
 
     public float gravity = 5;
 
+	public AudioClip doublejump;
+	public AudioClip running;
+	public AudioClip hookshotgrabbingon;
+	public AudioClip hookshotgoingout;
+	public AudioClip hookshotdrawingbackin;
+
+	private AudioSource source1;
+	private AudioSource source2;
+	private AudioSource source3;
+	private AudioSource source4;
+	private AudioSource source5;
+
     string originalTag;
 
     int jumpsRemaining = 2;
@@ -117,6 +129,8 @@ public class Movement : MonoBehaviour {
                     newY.y = groundedJumpPower;
                     jumpsRemaining--;
                     jumpBuffer = .2f;
+					source1 = GetComponent<AudioSource>();
+					source1.PlayOneShot(doublejump);
                 }
                 else if (jumpsRemaining == 1)
                 {
@@ -141,6 +155,8 @@ public class Movement : MonoBehaviour {
                 if (Mathf.Abs(transform.position.x - hookedDest.x) > .2f)
                 {
                     transform.position = Vector3.MoveTowards(transform.position, hookedDest, hookedTime);
+					source5 = GetComponent<AudioSource>();
+					source5.PlayOneShot(hookshotdrawingbackin);
                 }
                 else
                 {
