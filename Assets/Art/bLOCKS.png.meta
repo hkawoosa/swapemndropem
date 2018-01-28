@@ -1,0 +1,627 @@
+fileFormatVersion: 2
+guid: a1795c3015f292549bd9e73107b8c633
+timeCreated: 1517100486
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bLOCKS_0
+    21300002: bLOCKS_1
+    21300004: bLOCKS_2
+    21300006: bLOCKS_3
+    21300008: bLOCKS_4
+    21300010: bLOCKS_5
+    21300012: bLOCKS_6
+    21300014: bLOCKS_7
+    21300016: bLOCKS_8
+    21300018: bLOCKS_9
+    21300020: bLOCKS_10
+    21300022: bLOCKS_11
+    21300024: bLOCKS_12
+    21300026: bLOCKS_13
+    21300028: bLOCKS_14
+    21300030: bLOCKS_15
+    21300032: bLOCKS_16
+    21300034: bLOCKS_17
+    21300036: bLOCKS_18
+    21300038: bLOCKS_19
+    21300040: bLOCKS_20
+    21300042: bLOCKS_21
+    21300044: bLOCKS_22
+    21300046: bLOCKS_23
+    21300048: bLOCKS_24
+    21300050: bLOCKS_25
+    21300052: bLOCKS_26
+    21300054: bLOCKS_27
+    21300056: bLOCKS_28
+    21300058: bLOCKS_29
+    21300060: bLOCKS_30
+    21300062: bLOCKS_31
+    21300064: bLOCKS_32
+    21300066: bLOCKS_33
+    21300068: bLOCKS_34
+    21300070: bLOCKS_35
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bLOCKS_0
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 2279
+        width: 598
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_1
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 2279
+        width: 598
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_2
+      rect:
+        serializedVersion: 2
+        x: 2259
+        y: 2296
+        width: 603
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_3
+      rect:
+        serializedVersion: 2
+        x: 2983
+        y: 2301
+        width: 604
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_4
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 2334
+        width: 598
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_5
+      rect:
+        serializedVersion: 2
+        x: 4482
+        y: 2317
+        width: 598
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_6
+      rect:
+        serializedVersion: 2
+        x: 5360
+        y: 2427
+        width: 603
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_7
+      rect:
+        serializedVersion: 2
+        x: 6584
+        y: 2301
+        width: 603
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_8
+      rect:
+        serializedVersion: 2
+        x: 7704
+        y: 2159
+        width: 603
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_9
+      rect:
+        serializedVersion: 2
+        x: 8686
+        y: 2400
+        width: 598
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_10
+      rect:
+        serializedVersion: 2
+        x: 9595
+        y: 2290
+        width: 600
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_11
+      rect:
+        serializedVersion: 2
+        x: 10443
+        y: 2290
+        width: 603
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_12
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1626
+        width: 603
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_13
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 1615
+        width: 598
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_14
+      rect:
+        serializedVersion: 2
+        x: 2017
+        y: 1500
+        width: 604
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_15
+      rect:
+        serializedVersion: 2
+        x: 2742
+        y: 1533
+        width: 598
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_16
+      rect:
+        serializedVersion: 2
+        x: 3571
+        y: 1604
+        width: 603
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_17
+      rect:
+        serializedVersion: 2
+        x: 4471
+        y: 1709
+        width: 603
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_18
+      rect:
+        serializedVersion: 2
+        x: 6326
+        y: 1462
+        width: 598
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_19
+      rect:
+        serializedVersion: 2
+        x: 7023
+        y: 1692
+        width: 604
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_20
+      rect:
+        serializedVersion: 2
+        x: 8203
+        y: 1478
+        width: 604
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_21
+      rect:
+        serializedVersion: 2
+        x: 8845
+        y: 1330
+        width: 598
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_22
+      rect:
+        serializedVersion: 2
+        x: 9723
+        y: 1489
+        width: 604
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_23
+      rect:
+        serializedVersion: 2
+        x: 10464
+        y: 1528
+        width: 599
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_24
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 886
+        width: 598
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_25
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 869
+        width: 598
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_26
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 837
+        width: 604
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_27
+      rect:
+        serializedVersion: 2
+        x: 2539
+        y: 837
+        width: 603
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_28
+      rect:
+        serializedVersion: 2
+        x: 3170
+        y: 908
+        width: 598
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_29
+      rect:
+        serializedVersion: 2
+        x: 4575
+        y: 856
+        width: 603
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_30
+      rect:
+        serializedVersion: 2
+        x: 6063
+        y: 732
+        width: 603
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_31
+      rect:
+        serializedVersion: 2
+        x: 6754
+        y: 619
+        width: 603
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_32
+      rect:
+        serializedVersion: 2
+        x: 7405
+        y: 1039
+        width: 600
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_33
+      rect:
+        serializedVersion: 2
+        x: 8203
+        y: 628
+        width: 604
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_34
+      rect:
+        serializedVersion: 2
+        x: 9125
+        y: 562
+        width: 598
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bLOCKS_35
+      rect:
+        serializedVersion: 2
+        x: 10086
+        y: 639
+        width: 598
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
