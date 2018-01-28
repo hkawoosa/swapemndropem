@@ -6,7 +6,6 @@ public class OnPush : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other);
         Movement m = other.GetComponent<Movement>();
         if (m != null && other.tag != this.GetComponent<PushInfo>().tag)
         {
