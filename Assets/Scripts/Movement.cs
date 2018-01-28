@@ -24,18 +24,13 @@ public class Movement : MonoBehaviour {
 
 	public AudioClip doublejump;
 	public AudioClip singlestep;
-	public AudioClip hookshotgrabbingon;
-	public AudioClip hookshotgoingout;
-	public AudioClip hookshotdrawingbackin;
 
 	private float walkdelay = 0;
     
 
 	private AudioSource source1;
 	private AudioSource source2;
-	private AudioSource source3;
-	private AudioSource source4;
-	private AudioSource source5;
+
 	private float volume = .3f;
 	private float jumpvol = .1f;
 
@@ -179,8 +174,6 @@ public class Movement : MonoBehaviour {
                 if (Mathf.Abs(transform.position.x - hookedDest.x) > .2f)
                 {
                     transform.position = Vector3.MoveTowards(transform.position, hookedDest, hookedTime);
-                    source5 = GetComponent<AudioSource>();
-                    source5.PlayOneShot(hookshotdrawingbackin);
                 }
                 else
                 {

@@ -9,6 +9,16 @@ public class PlayerChain : MonoBehaviour {
     float currentDelay = 0;
     public float timeToDestination = 15f;
 
+	public AudioClip hookshotgrabbingon;
+	public AudioClip hookshotgoingout;
+	public AudioClip hookshotdrawingbackin;
+
+	private AudioSource source3;
+	private AudioSource source4;
+	private AudioSource source5;
+
+	public float vol = .3f;
+
     public float chainLength = 7f;
 
     // Update is called once per frame
@@ -33,6 +43,8 @@ public class PlayerChain : MonoBehaviour {
                 endPoint.x += chainLength;
                 b = Instantiate(chain, transform.position + (Vector3.right * dir), Quaternion.Euler(0,0,180));
                 b.GetComponent<ChainInfo>().setEnd(endPoint);
+				source4 = GetComponent<AudioSource>();
+				source4.PlayOneShot(hookshotgoingout,vol);
             }
 
             b.GetComponent<ChainInfo>().setParent(this.gameObject);
