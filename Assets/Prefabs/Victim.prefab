@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 212086299284762150}
   - component: {fileID: 136622720944658088}
   - component: {fileID: 82220024987404658}
+  - component: {fileID: 95621283377788572}
   m_Layer: 12
   m_Name: Victim
   m_TagString: Victim
@@ -175,6 +176,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95621283377788572
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789368767118224}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9caf260871e0bbd46b12efdf3d759e4e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114094982081701840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -316,7 +334,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 78
   m_Sprite: {fileID: 21300016, guid: 5e862f9a86e903d4da60297f6b83bccc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

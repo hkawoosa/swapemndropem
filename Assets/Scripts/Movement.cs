@@ -27,6 +27,7 @@ public class Movement : MonoBehaviour {
 	public AudioClip hookshotgrabbingon;
 	public AudioClip hookshotgoingout;
 	public AudioClip hookshotdrawingbackin;
+    
 
 	private AudioSource source1;
 	private AudioSource source2;
@@ -62,7 +63,7 @@ public class Movement : MonoBehaviour {
     void FixedUpdate()
     {
         RaycastHit hit;
-        
+       
         if (stunnedFor <= 0)
         {
             /**if(Physics.SphereCast(this.transform.position, 1f, Vector3.down, out hit, cc.bounds.extents.x, MovingPlatform))
@@ -119,15 +120,21 @@ public class Movement : MonoBehaviour {
             {
                 
                 if (jumpBuffer <= 0)
+                
                 {
+
+                   
                     jumpsRemaining = 2;
+                    
                 }
+               
                 else
                 {
                     jumpBuffer -= Time.deltaTime;
                 }
 
             }
+            
             else
                 
             {
@@ -137,12 +144,13 @@ public class Movement : MonoBehaviour {
                     jumpsRemaining = 1;
                 }
                 newY.y -= gravity * Time.deltaTime;
+               
             }
 
             if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Jump"))
             {
                 animator.SetTrigger("Jump");
-
+                
                 if (jumpsRemaining == 2)
                 {
                     newY.y = groundedJumpPower;
@@ -150,31 +158,35 @@ public class Movement : MonoBehaviour {
                     jumpBuffer = .2f;
                     source1 = GetComponent<AudioSource>();
                     source1.PlayOneShot(doublejump);
-                }
 
+                   
+
+                }
+               
                 else if (jumpsRemaining == 1)
                 {
+                    
                     newY.y = doubleJumpPower;
                     jumpsRemaining--;
                 }
 
+
+                
             }
             rb.velocity = newY;
+
+                if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Wavedash"))
+               {
+                   Vector3 newDirection = rb.velocity;
+                  newDirection.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
+                   newDirection.y = Input.GetAxis(this.tag + "Vertical") * maxSpeed;
+            }
             
-            if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Wavedash"))
-            {
-                Vector3 newDirection = rb.velocity;
-                newDirection.x = Input.GetAxis(this.tag + "Horizontal") * maxSpeed;
-                newDirection.y = Input.GetAxis(this.tag + "Vertical") * maxSpeed;
-            }
-            if (jumpsRemaining == 2)
-            {
-                animator.SetTrigger("Idle After Jump");
-            }
         }
        
         else
         {
+           
             if (hooked)
             {
                 if (Mathf.Abs(transform.position.x - hookedDest.x) > .2f)
@@ -198,9 +210,11 @@ public class Movement : MonoBehaviour {
 
             stunnedFor -= Time.deltaTime;
         }
+      
     }
+     
 
-    public void setStunTime(float length)
+public void setStunTime(float length)
     {
         stunnedFor = length;
     }
@@ -248,4 +262,6 @@ public class Movement : MonoBehaviour {
     {
         return originalTag;
     }
+
 }
+

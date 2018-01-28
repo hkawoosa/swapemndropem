@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 114087371698643306}
   - component: {fileID: 82078566825409186}
   - component: {fileID: 114057950922376404}
+  - component: {fileID: 95511813430660030}
   m_Layer: 9
   m_Name: P2_
   m_TagString: P2_
@@ -177,6 +178,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95511813430660030
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538255624575118}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a42e312fd7e60734a871b96bbfaad92f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114057950922376404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,7 +206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1314d8d1ab1984eafaa57a362af99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1538255624575118}
   deathLength: 5
 --- !u!114 &114087371698643306
 MonoBehaviour:
@@ -346,7 +363,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300008, guid: 5e862f9a86e903d4da60297f6b83bccc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

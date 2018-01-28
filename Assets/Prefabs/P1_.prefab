@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 114871132594442654}
   - component: {fileID: 82144734522696230}
   - component: {fileID: 114178946385408070}
+  - component: {fileID: 95279667651381522}
   m_Layer: 9
   m_Name: P1_
   m_TagString: P1_
@@ -177,6 +178,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95279667651381522
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1369063110045166}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c0d765288ad159245ab1f3ad8983d839, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114056142403457242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,16 +210,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   maxSpeed: 5
-  acceleration: 5
   groundedJumpPower: 10
   doubleJumpPower: 8
   gravity: 5
-  doublejump: {fileID: 8300000, guid: 213981427f4434670967158e475c4fb9, type: 3}
+  doublejump: {fileID: 0}
   running: {fileID: 0}
   hookshotgrabbingon: {fileID: 0}
   hookshotgoingout: {fileID: 0}
-  hookshotdrawingbackin: {fileID: 8300000, guid: 9eae39a976b9f4ad8871f08ca85852bd,
-    type: 3}
+  hookshotdrawingbackin: {fileID: 0}
   jumpBuffer: 0.2
   stunLength: 1
 --- !u!114 &114178946385408070
@@ -215,7 +231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1314d8d1ab1984eafaa57a362af99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1369063110045166}
   deathLength: 5
 --- !u!114 &114244640227763568
 MonoBehaviour:
@@ -258,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cbed1c3b4a1b249b903445957cecf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Push: {fileID: 1276912182042390, guid: abe784459f39c2f4db5af397ce722f9f, type: 2}
+  Push: {fileID: 0}
   distanceFromPlayer: 3
   force: 5
   forcePushDelay: 2
@@ -348,7 +363,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 5e862f9a86e903d4da60297f6b83bccc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
