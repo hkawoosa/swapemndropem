@@ -210,7 +210,7 @@ MonoBehaviour:
   chainPushDelay: 4
   timeToDestination: 0.5
   hookshotgrabbingon: {fileID: 0}
-  hookshotgoingout: {fileID: 0}
+  hookshotgoingout: {fileID: 8300000, guid: 633af2ee7b7b746b9bf2132ca6ae8a1b, type: 3}
   hookshotdrawingbackin: {fileID: 0}
   vol: 0.3
   chainLength: 7
