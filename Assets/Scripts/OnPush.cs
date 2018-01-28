@@ -10,7 +10,6 @@ public class OnPush : MonoBehaviour {
         Movement m = other.GetComponent<Movement>();
         if (m != null && other.tag != this.GetComponent<PushInfo>().tag)
         {
-            Debug.Log(other);
             m.Push(GetComponent<PushInfo>().getDirection(), GetComponent<PushInfo>().getForce());
         }
     }

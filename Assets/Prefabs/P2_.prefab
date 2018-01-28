@@ -220,10 +220,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   maxSpeed: 5
-  acceleration: 5
   groundedJumpPower: 10
   doubleJumpPower: 8
   gravity: 5
+  doublejump: {fileID: 0}
+  running: {fileID: 0}
+  hookshotgrabbingon: {fileID: 0}
+  hookshotgoingout: {fileID: 0}
+  hookshotdrawingbackin: {fileID: 0}
   jumpBuffer: 0.2
   stunLength: 1
 --- !u!114 &114263243454629214
@@ -252,8 +256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671e35542cc19534bbd507778465b2e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1: {fileID: 0}
-  p2: {fileID: 0}
+  p1: {fileID: 1369063110045166, guid: 2c17af3d09bb3454cb1f5af8cfea01ca, type: 2}
+  p2: {fileID: 1538255624575118}
 --- !u!114 &114340850519311688
 MonoBehaviour:
   m_ObjectHideFlags: 1
