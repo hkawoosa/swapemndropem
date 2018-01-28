@@ -11,6 +11,7 @@ TagManager:
   - P3_
   - Victim
   - GoneFishing
+  - P4_
   layers:
   - Default
   - TransparentFX

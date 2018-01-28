@@ -29,19 +29,25 @@ public class Swap : MonoBehaviour {
                 other.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = temp;
                 other.tag = "GoneFishing";
             }
-           /** else if (CompareTag("P1_"))
-            {
+           else if (CompareTag("P1_") && this.GetComponent<Movement>().getOriginalTag() == "Victim")
+           {
                 this.tag = other.tag;
+                this.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = other.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+                other.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = null;
                 other.tag = "GoneFishing";
                 p1.tag = "P1_";
+                p1.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = p1.GetComponent<Movement>().getOriginalHead();
 
-            }
-            else if (CompareTag("P2_"))
-            {
+           }
+           else if (CompareTag("P2_") && this.GetComponent<Movement>().getOriginalTag() == "Victim")
+           {
                 this.tag = other.tag;
+                this.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = other.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+                other.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = null;
                 other.tag = "GoneFishing";
                 p2.tag = "P2_";
-            }*/
+                p2.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = p2.GetComponent<Movement>().getOriginalHead();
+            }
         }
         else
         {

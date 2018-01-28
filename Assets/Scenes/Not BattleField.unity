@@ -340,6 +340,11 @@ Prefab:
       propertyPath: SwapMode
       value: 
       objectReference: {fileID: 1045863818}
+    - target: {fileID: 136622720944658088, guid: b91ea7f84f8a93944946ca033f9c8020,
+        type: 2}
+      propertyPath: m_Height
+      value: 5.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b91ea7f84f8a93944946ca033f9c8020, type: 2}
   m_IsPrefabParent: 0
@@ -1456,6 +1461,11 @@ Prefab:
       propertyPath: SwapMode
       value: 
       objectReference: {fileID: 1045863818}
+    - target: {fileID: 136497966695768132, guid: 9406547d5cda34d40b4734fd3e76f222,
+        type: 2}
+      propertyPath: m_Height
+      value: 5.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9406547d5cda34d40b4734fd3e76f222, type: 2}
   m_IsPrefabParent: 0
@@ -3338,6 +3348,21 @@ Prefab:
     - target: {fileID: 114244640227763568, guid: 2c17af3d09bb3454cb1f5af8cfea01ca,
         type: 2}
       propertyPath: scoreGuy
+      value: 
+      objectReference: {fileID: 1045863818}
+    - target: {fileID: 136773948688363228, guid: 2c17af3d09bb3454cb1f5af8cfea01ca,
+        type: 2}
+      propertyPath: m_Height
+      value: 5.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503008319540966, guid: 2c17af3d09bb3454cb1f5af8cfea01ca,
+        type: 2}
+      propertyPath: force
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114492163116745138, guid: 2c17af3d09bb3454cb1f5af8cfea01ca,
+        type: 2}
+      propertyPath: SwapMode
       value: 
       objectReference: {fileID: 1045863818}
     m_RemovedComponents: []

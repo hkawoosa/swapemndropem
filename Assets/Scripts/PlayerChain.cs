@@ -14,7 +14,7 @@ public class PlayerChain : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Pull") && currentDelay <= 0)
+        if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Pull") && currentDelay <= 0 && !GetComponent<PlayerDeath>().IsDead())
         {
             currentDelay = chainPushDelay;
             GetComponent<Movement>().setStunTime(50);
@@ -31,7 +31,7 @@ public class PlayerChain : MonoBehaviour {
             {
                 Vector3 endPoint = transform.position;
                 endPoint.x += chainLength;
-                b = Instantiate(chain, transform.position + (Vector3.right * dir), Quaternion.identity);
+                b = Instantiate(chain, transform.position + (Vector3.right * dir), Quaternion.Euler(0,0,180));
                 b.GetComponent<ChainInfo>().setEnd(endPoint);
             }
 
