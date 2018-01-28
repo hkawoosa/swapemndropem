@@ -8,6 +8,8 @@ TagManager:
   - P2_
   - Spikes
   - Wall
+  - Victim
+  - GoneFishing
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - Player
   - Bullet
   - Wall
-  - 
+  - Victim
   - 
   - 
   - 

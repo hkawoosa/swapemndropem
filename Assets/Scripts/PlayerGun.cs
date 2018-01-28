@@ -17,7 +17,7 @@ public class PlayerGun : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown(this.tag + "Swap"))
+		if (!CompareTag("Victim") && Input.GetButtonDown(this.tag + "Swap"))
         {
             GameObject b = Instantiate(bullet, transform.position + (Vector3.right * dir.GetDirection()), Quaternion.identity);
             b.tag = this.tag;
