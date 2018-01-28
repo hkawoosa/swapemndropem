@@ -140,7 +140,7 @@ public class Movement : MonoBehaviour {
             {
                 if (transform.position != hookedDest)
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, hookedDest, Time.deltaTime * hookedTime);
+                    transform.position = Vector3.MoveTowards(transform.position, hookedDest, hookedTime);
                 }
                 else
                 {
