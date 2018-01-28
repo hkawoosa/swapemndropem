@@ -33,8 +33,11 @@ public class Movement : MonoBehaviour {
     public float stunLength = 1f;
     Vector3 direction;
 
-    bool stunned = false, usingHook = false;
+    bool stunned = false, usingHook = false, hooked = false;
     Vector3 pushedVelocity;
+
+    Vector3 hookedDest;
+    float hookedTime;
 
     void Awake()
     {
@@ -130,9 +133,22 @@ public class Movement : MonoBehaviour {
         }
         else
         {
-            if(pushedVelocity.x > 0)
+            if (pushedVelocity.x > 0)
             {
                 rb.velocity = pushedVelocity;
+            }
+            else if (hooked)
+            {
+                if (transform.position != hookedDest)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position,hookedDest, Time.deltaTime * hookedTime);
+                }
+                else
+                {
+                    rb.useGravity = true;
+                    hooked = false;
+                    stunnedFor = .5f;
+                }
             }
             stunnedFor -= Time.deltaTime;
         }
@@ -190,5 +206,14 @@ public class Movement : MonoBehaviour {
             pushedVelocity = rb.velocity;
             pushedVelocity.x = Vector3.left.x * force;
         }
+    }
+
+    public void getHooked(Vector3 destination, float time)
+    {
+        rb.useGravity = false;
+        hooked = true;
+        hookedDest = destination;
+        hookedTime = time;
+        stunnedFor = 10f;
     }
 }

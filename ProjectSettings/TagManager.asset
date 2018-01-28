@@ -8,6 +8,7 @@ TagManager:
   - P2_
   - Spikes
   - Wall
+  - P3_
   layers:
   - Default
   - TransparentFX
