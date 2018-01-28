@@ -335,6 +335,11 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 2.36
       objectReference: {fileID: 0}
+    - target: {fileID: 114974355211375804, guid: b91ea7f84f8a93944946ca033f9c8020,
+        type: 2}
+      propertyPath: SwapMode
+      value: 
+      objectReference: {fileID: 1045863818}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b91ea7f84f8a93944946ca033f9c8020, type: 2}
   m_IsPrefabParent: 0
@@ -1446,6 +1451,11 @@ Prefab:
       propertyPath: Moving.m_Bits
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114340606137379942, guid: 9406547d5cda34d40b4734fd3e76f222,
+        type: 2}
+      propertyPath: SwapMode
+      value: 
+      objectReference: {fileID: 1045863818}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9406547d5cda34d40b4734fd3e76f222, type: 2}
   m_IsPrefabParent: 0
@@ -3019,7 +3029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1dbc3c9fcdd5b74bb1324e7094dcffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: 0
+  style: 1
   pcc:
   - {fileID: 70200114}
   - {fileID: 326872982}
