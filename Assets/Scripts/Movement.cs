@@ -133,15 +133,11 @@ public class Movement : MonoBehaviour {
         }
         else
         {
-            if (pushedVelocity.x > 0)
-            {
-                rb.velocity = pushedVelocity;
-            }
-            else if (hooked)
+            if (hooked)
             {
                 if (transform.position != hookedDest)
                 {
-                    transform.position = Vector3.MoveTowards(transform.position,hookedDest, Time.deltaTime * hookedTime);
+                    transform.position = Vector3.MoveTowards(transform.position, hookedDest, Time.deltaTime * hookedTime);
                 }
                 else
                 {
@@ -150,6 +146,11 @@ public class Movement : MonoBehaviour {
                     stunnedFor = .5f;
                 }
             }
+            else if(pushedVelocity.x > 0)
+            {
+                rb.velocity = pushedVelocity;
+            }
+             
             stunnedFor -= Time.deltaTime;
         }
        
