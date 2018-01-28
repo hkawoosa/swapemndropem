@@ -213,8 +213,8 @@ MonoBehaviour:
   groundedJumpPower: 10
   doubleJumpPower: 8
   gravity: 5
-  doublejump: {fileID: 0}
-  running: {fileID: 0}
+  doublejump: {fileID: 8300000, guid: 213981427f4434670967158e475c4fb9, type: 3}
+  singlestep: {fileID: 8300000, guid: eeb50c1d63ed342848bf330557354a5b, type: 3}
   hookshotgrabbingon: {fileID: 0}
   hookshotgoingout: {fileID: 0}
   hookshotdrawingbackin: {fileID: 0}
