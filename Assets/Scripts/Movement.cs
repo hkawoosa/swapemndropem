@@ -46,6 +46,8 @@ public class Movement : MonoBehaviour {
     bool hooked = false;
     Vector3 pushedVelocity;
 
+    Sprite originalHead;
+
     Vector3 hookedDest;
     float hookedTime;
     void Start()
@@ -57,6 +59,7 @@ public class Movement : MonoBehaviour {
         rb = this.GetComponent<Rigidbody>();
         cc = this.GetComponent<CapsuleCollider>();
         pd = this.GetComponent<PlayerDeath>();
+        originalHead = transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
         originalTag = this.tag;
     }
 
@@ -260,6 +263,16 @@ public void setStunTime(float length)
     public string getOriginalTag()
     {
         return originalTag;
+    }
+
+    public Sprite getOriginalHead()
+    {
+        return originalHead;
+    }
+
+    public void removeVelocity()
+    {
+        rb.velocity = new Vector3(0, 0, 0);
     }
 
 }
