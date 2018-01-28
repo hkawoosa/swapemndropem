@@ -9,6 +9,7 @@ public class ChainInfo : MonoBehaviour {
     Vector3 endPosition;
     bool reached = false;
     GameObject par;
+    public float distancePerTime = .25f;
 
     void FixedUpdate()
     {
@@ -16,7 +17,7 @@ public class ChainInfo : MonoBehaviour {
         {
             if (transform.position != endPosition)
             {
-                transform.position = Vector3.MoveTowards(transform.position, endPosition, Time.deltaTime * timeToDestination);
+                transform.position = Vector3.MoveTowards(transform.position, endPosition, distancePerTime);
             }
             else
             {
@@ -28,7 +29,7 @@ public class ChainInfo : MonoBehaviour {
         {
             if (transform.position != startPosition)
             {
-                transform.position = Vector3.MoveTowards(transform.position, startPosition, Time.deltaTime * timeToDestination);
+                transform.position = Vector3.MoveTowards(transform.position, startPosition, distancePerTime);
             }
             else
             {
@@ -44,7 +45,7 @@ public class ChainInfo : MonoBehaviour {
         if (m != null && other.tag != tag)
         {
             reached = true;
-            m.getHooked(startPosition, timeToDestination);
+            m.getHooked(startPosition, distancePerTime);
         }
     }
 

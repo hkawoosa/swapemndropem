@@ -7,6 +7,7 @@ public class PlayerChain : MonoBehaviour {
 
     public float chainPushDelay = 4;
     float currentDelay = 0;
+    public float timeToDestination = 15f;
 
     public float chainLength = 7f;
 
@@ -16,7 +17,7 @@ public class PlayerChain : MonoBehaviour {
         if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Pull") && currentDelay <= 0)
         {
             currentDelay = chainPushDelay;
-            GetComponent<Movement>().setStunTime(chainPushDelay);
+            GetComponent<Movement>().setStunTime(50);
             GameObject b;
             int dir = this.GetComponent<Direction>().GetDirection();
             if (dir == -1)
@@ -36,7 +37,7 @@ public class PlayerChain : MonoBehaviour {
 
             b.GetComponent<ChainInfo>().setParent(this.gameObject);
             b.GetComponent<ChainInfo>().setStart(transform.position + (Vector3.right * dir));
-            b.GetComponent<ChainInfo>().setTime(chainPushDelay/2);
+            b.GetComponent<ChainInfo>().setTime(timeToDestination);
             b.tag = tag;
         }
         currentDelay -= Time.deltaTime;
