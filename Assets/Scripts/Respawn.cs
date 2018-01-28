@@ -31,6 +31,8 @@ public class Respawn : MonoBehaviour {
                 transform.rotation = Quaternion.identity;
                 playerManaging.GetComponent<ScoreAndStuff>().ManageRespawn(this.gameObject);
                 transform.position = respawnPosition;
+                GetComponent<Movement>().setStunTime(0);
+                GetComponent<Movement>().removeVelocity();
                 passOne = true;
             }
         }

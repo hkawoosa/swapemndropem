@@ -331,6 +331,10 @@ Prefab:
       propertyPath: scoreGuy
       value: 
       objectReference: {fileID: 1045863818}
+    - target: {fileID: 4484434556943490, guid: b91ea7f84f8a93944946ca033f9c8020, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.36
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b91ea7f84f8a93944946ca033f9c8020, type: 2}
   m_IsPrefabParent: 0
@@ -1437,6 +1441,11 @@ Prefab:
       propertyPath: playerManaging
       value: 
       objectReference: {fileID: 1045863818}
+    - target: {fileID: 114849954261648190, guid: 9406547d5cda34d40b4734fd3e76f222,
+        type: 2}
+      propertyPath: Moving.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9406547d5cda34d40b4734fd3e76f222, type: 2}
   m_IsPrefabParent: 0

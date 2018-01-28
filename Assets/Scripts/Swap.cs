@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Swap : MonoBehaviour {
 
+    public GameObject SwapMode;
+
+    public float swapStun = .5f;
+
     public GameObject p1;
     public GameObject p2;
 
@@ -15,23 +19,40 @@ public class Swap : MonoBehaviour {
 
     public void SwapControl(GameObject other)
     {
-        if (CompareTag("Victim"))
+        if(SwapMode.GetComponent<ScoreAndStuff>().style == ScoreAndStuff.Mode.victim)
         {
-            this.tag = other.tag;
-            other.tag = "GoneFishing";
-        }
-        else if (CompareTag("P1_"))
-        {
-            this.tag = other.tag;
-            other.tag = "GoneFishing";
-            p1.tag = "P1_";
+            if (CompareTag("Victim"))
+            {
+                this.tag = other.tag;
+                Sprite temp = this.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+                this.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = other.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+                other.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = temp;
+                other.tag = "GoneFishing";
+            }
+           /** else if (CompareTag("P1_"))
+            {
+                this.tag = other.tag;
+                other.tag = "GoneFishing";
+                p1.tag = "P1_";
 
+            }
+            else if (CompareTag("P2_"))
+            {
+                this.tag = other.tag;
+                other.tag = "GoneFishing";
+                p2.tag = "P2_";
+            }*/
         }
-        else if (CompareTag("P2_"))
+        else
         {
+            string temp = this.tag;
             this.tag = other.tag;
-            other.tag = "GoneFishing";
-            p2.tag = "P2_";
+            Sprite tempSprite = this.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+            this.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = other.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+            other.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = tempSprite;
+            other.GetComponent<Movement>().setStunTime(swapStun);
+            other.tag = temp;
         }
+       
     }
 }

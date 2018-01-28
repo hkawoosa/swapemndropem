@@ -72,12 +72,12 @@ public class ScoreAndStuff : MonoBehaviour {
         {
             if (pcc[i].GetComponent<Movement>().getOriginalTag() == player.tag)
             {
-                pcc[i].tag = pcc[i].GetComponent<Movement>().getOriginalTag();
-                //smae thing for head
+                pcc[i].tag = player.tag;
+                pcc[i].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
             }
             
         }
         player.tag = player.GetComponent<Movement>().getOriginalTag();
-        //same thing for head
+        player.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = player.GetComponent<Movement>().getOriginalHead();
     }
 }
