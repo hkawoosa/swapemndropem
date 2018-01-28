@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1314d8d1ab1984eafaa57a362af99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerManaging: {fileID: 0}
   deathLength: 5
 --- !u!114 &114087371698643306
 MonoBehaviour:
@@ -240,8 +241,8 @@ MonoBehaviour:
   groundedJumpPower: 10
   doubleJumpPower: 8
   gravity: 5
-  doublejump: {fileID: 0}
-  running: {fileID: 0}
+  doublejump: {fileID: 8300000, guid: 213981427f4434670967158e475c4fb9, type: 3}
+  singlestep: {fileID: 8300000, guid: eeb50c1d63ed342848bf330557354a5b, type: 3}
   hookshotgrabbingon: {fileID: 0}
   hookshotgoingout: {fileID: 0}
   hookshotdrawingbackin: {fileID: 0}
@@ -273,6 +274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671e35542cc19534bbd507778465b2e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SwapMode: {fileID: 0}
+  swapStun: 0.5
   p1: {fileID: 0}
   p2: {fileID: 0}
 --- !u!114 &114340850519311688

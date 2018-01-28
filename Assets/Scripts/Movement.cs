@@ -23,10 +23,12 @@ public class Movement : MonoBehaviour {
     public float gravity = 5;
 
 	public AudioClip doublejump;
-	public AudioClip running;
+	public AudioClip singlestep;
 	public AudioClip hookshotgrabbingon;
 	public AudioClip hookshotgoingout;
 	public AudioClip hookshotdrawingbackin;
+
+	private float walkdelay = 0;
     
 
 	private AudioSource source1;
@@ -34,6 +36,8 @@ public class Movement : MonoBehaviour {
 	private AudioSource source3;
 	private AudioSource source4;
 	private AudioSource source5;
+	private float volume = .3f;
+	private float jumpvol = .1f;
 
     string originalTag;
 
@@ -102,8 +106,15 @@ public class Movement : MonoBehaviour {
                     {
                         //newX.x = Mathf.Min(newX.x, maxSpeed);
                    
-                    animator.SetTrigger("Walk");
-                }
+					animator.SetTrigger("Walk");
+					if (walkdelay <= 0) {
+						source2 = GetComponent<AudioSource> ();
+						source2.PlayOneShot (singlestep, volume);
+						walkdelay = .3f;
+					} else {
+						walkdelay -= Time.deltaTime;
+					}
+					}
                     else
                     {
                         newX.x = Mathf.Max(newX.x, maxSpeed * -1);
@@ -153,14 +164,14 @@ public class Movement : MonoBehaviour {
             if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Jump"))
             {
                 animator.SetTrigger("Jump");
+				source1 = GetComponent<AudioSource>();
+				source1.PlayOneShot(doublejump,jumpvol);
                 
                 if (jumpsRemaining == 2)
                 {
                     newY.y = groundedJumpPower;
                     jumpsRemaining--;
                     jumpBuffer = .2f;
-                    source1 = GetComponent<AudioSource>();
-                    source1.PlayOneShot(doublejump);
 
                    
 
