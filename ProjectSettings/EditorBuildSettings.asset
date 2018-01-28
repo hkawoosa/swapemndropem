@@ -4,4 +4,31 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Title Screen.unity
+    guid: c9e44d4efbd48fd4a89abe42b627f4d8
+  - enabled: 1
+    path: Assets/Scenes/Mode Select.unity
+    guid: 6f7c4e786e5038343adcd1659feda69d
+  - enabled: 1
+    path: Assets/Scenes/Map Select.unity
+    guid: 225cdbcc99baed34c838e1e5ba70c0a3
+  - enabled: 1
+    path: Assets/Scenes/Map 4.unity
+    guid: 05f05eecbabdb5f4f9006d576a235c93
+  - enabled: 1
+    path: Assets/Scenes/Map 4 Two Player.unity
+    guid: b5ff4e2dfbc12a445805b3dee3cdefee
+  - enabled: 1
+    path: Assets/Scenes/Not BattleField.unity
+    guid: 9ba24ea4f4edf9a479b61d8a299f6d77
+  - enabled: 1
+    path: Assets/Scenes/Not BattleField 2 Player.unity
+    guid: 1f694ab0bad7cce4099036b9a86e95d4
+  - enabled: 1
+    path: Assets/Scenes/Not FD.unity
+    guid: 873191f72826865458b6df0b2279db20
+  - enabled: 1
+    path: Assets/Scenes/Not FD Two Player.unity
+    guid: 415e8edad00bdfd42a71d734d1decb0b
