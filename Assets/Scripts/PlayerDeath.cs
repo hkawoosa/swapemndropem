@@ -7,6 +7,12 @@ public class PlayerDeath : MonoBehaviour {
     public float knockback = 100f;
     public float knockbackTime = 1f;
 
+	public AudioClip deathvar2;
+
+	private AudioSource source;
+	private float volume = 1f;
+
+
     Rigidbody rb;
     CapsuleCollider cc;
     
@@ -18,6 +24,7 @@ public class PlayerDeath : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody>();
         cc = GetComponent<CapsuleCollider>();
+		source = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -53,6 +60,7 @@ public class PlayerDeath : MonoBehaviour {
 
     IEnumerator Death(Collision col)
     {
+		source.PlayOneShot(deathvar2,volume);
         isDead = true;
         Vector3 direction = col.impulse.normalized + Vector3.up;
         rb.AddForce(direction * knockback);
