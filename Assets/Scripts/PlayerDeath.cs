@@ -75,4 +75,8 @@ public class PlayerDeath : MonoBehaviour {
     {
         return isDead;
     }
+    public void undie()
+    {
+        isDead = true;
+    }
 }

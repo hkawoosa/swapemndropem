@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour {
 
-    public GameObject player;
-
     public float deathLength = 5;
     float currentCounter = 0;
     bool passOne = true;
@@ -27,9 +25,14 @@ public class Respawn : MonoBehaviour {
             }
             else
             {
-                GameObject a = Instantiate(player, respawnPosition, Quaternion.identity);
-                Destroy(this.gameObject);
-
+                GetComponent<PlayerDeath>().undie();
+                transform.rotation = Quaternion.identity;
+                if(tag != GetComponent<Movement>().getOriginalTag())
+                {
+                    string temp = tag;
+                    tag = GetComponent<Movement>().getOriginalTag();
+                }
+                transform.position = respawnPosition;
             }
         }
         currentCounter -= Time.deltaTime;

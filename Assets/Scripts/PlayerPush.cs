@@ -12,12 +12,9 @@ public class PlayerPush : MonoBehaviour {
     public float forcePushDelay = 2;
     float currentDelay = 0;
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         if ((CompareTag("P1_") || CompareTag("P2_")) && Input.GetButtonDown(this.tag + "Push") && currentDelay <= 0)
         {
             currentDelay = forcePushDelay;
